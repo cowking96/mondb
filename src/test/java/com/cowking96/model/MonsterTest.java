@@ -1,8 +1,7 @@
-package com.cowking96.monster;
+package com.cowking96.model;
 
 import org.junit.Test;
 import static com.google.common.truth.Truth.assertThat;
-import com.cowking96.Monster;
 
 /**
  * Created by nate on 5/11/17.

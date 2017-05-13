@@ -1,4 +1,4 @@
-package com.cowking96;
+package com.cowking96.model;
 
 /**
  * Created by nate on 5/11/17.
@@ -12,23 +12,7 @@ public class Monster {
 
     private int pageNumber;
 
-    private enum type{
-        Humanoid,
-        Undead,
-        Abberation,
-        Fiend,
-        Elemental,
-        Celestial,
-        Beast,
-        Construct,
-        Dragon,
-        Giant,
-        Monstrocity,
-        Plant,
-        Fey,
-        Ooz,
-
-    }
+    private MonsterType type;
 
     public String getName() {
         return name;
@@ -60,5 +44,13 @@ public class Monster {
 
     public void setPageNumber(int pageNumber) {
         this.pageNumber = pageNumber;
+    }
+
+    public MonsterType getType() {
+        return type;
+    }
+
+    public void setType(MonsterType type) {
+        this.type = type;
     }
 }
