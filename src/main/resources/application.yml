@@ -1,7 +1,7 @@
-## jdbc configuration
-driverClass: 'org.hsqldb.jdbcDriver'
-jdbcurl: 'jdbc:hsqldb:mem://monsterDb'
-username: 'sa'
+jpa:
+  driverClass: 'org.hsqldb.jdbcDriver'
+  jdbcUrl: 'jdbc:hsqldb:mem://monsterDb'
+  userName: 'sa'
 
-## hibernate configuration
+
 
