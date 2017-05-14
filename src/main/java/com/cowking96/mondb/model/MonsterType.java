@@ -1,4 +1,4 @@
-package com.cowking96.model;
+package com.cowking96.mondb.model;
 
 public enum MonsterType {
     Humanoid,
@@ -15,4 +15,5 @@ public enum MonsterType {
     Plant,
     Fey,
     Ooze,
+    None
 }
