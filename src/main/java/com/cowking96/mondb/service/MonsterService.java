@@ -6,5 +6,5 @@ import java.util.List;
 
 public interface MonsterService {
 
-    public List<Monster> listAll();
+    public Iterable<Monster> listAll();
 }

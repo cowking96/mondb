@@ -1,7 +1,7 @@
 package com.cowking96.mondb.service;
 
 
-import com.cowking96.mondb.dao.MonsterDao;
+import com.cowking96.mondb.dao.MonsterRepository;
 import com.cowking96.mondb.model.Monster;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -16,14 +16,14 @@ public class MonsterServiceImpl implements MonsterService {
     static final Logger LOG = LoggerFactory.getLogger(MonsterServiceImpl.class);
 
     @Autowired
-    private MonsterDao monsterDao;
+    private MonsterRepository monsterRepository;
 
     public MonsterServiceImpl(){
         LOG.debug("MonsterServiceImpl constructed");
     }
 
     @Override
-    public List<Monster> listAll() {
-        return monsterDao.findAll();
+    public Iterable<Monster> listAll() {
+        return monsterRepository.findAll();
     }
 }

@@ -8,11 +8,11 @@ public class MonsterTest {
     public void empty_construction(){
         Monster exampleMonster = new Monster();
         assertThat(exampleMonster.getName()).isNull();
-        assertThat(exampleMonster.getCr()).isEqualTo(0);
+        assertThat(exampleMonster.getCr()).isEqualTo((float)0.0);
         assertThat(exampleMonster.getXpValue()).isEqualTo(0);
         assertThat(exampleMonster.getPageNumber()).isNull();
         assertThat(exampleMonster.getId()).isNull();
-        assertThat(exampleMonster.getType()).isEqualTo(MonsterType.None);
+        assertThat(exampleMonster.getType()).isEqualTo(MonsterType.NONE);
     }
 
 }

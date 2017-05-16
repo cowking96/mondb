@@ -1,7 +1,7 @@
-jpa:
-  driverClass: 'org.hsqldb.jdbcDriver'
-  jdbcUrl: 'jdbc:hsqldb:mem://monsterDb'
-  userName: 'sa'
+spring:
+  jpa:
+    hibernate:
+      ddl-auto: 'create-drop'
 
 
 

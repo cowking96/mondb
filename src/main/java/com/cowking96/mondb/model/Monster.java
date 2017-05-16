@@ -2,36 +2,61 @@ package com.cowking96.mondb.model;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 
 @Entity
 public class Monster {
 
     @Id
-    private Integer id;
+    @GeneratedValue(strategy=GenerationType.AUTO)
+    private Long id;
 
     private String name;
-    private int cr;
+    private float cr;
     private int xpValue;
     private String pageNumber;
     private MonsterType type;
 
     public Monster(){
-        type = MonsterType.None;
+        type = MonsterType.NONE;
+    }
+
+    public Monster(String name, float cr, int xpValue, String pageNumber, MonsterType type){
+        this.name = name;
+        this.cr = cr;
+        this.xpValue = xpValue;
+        this.pageNumber = pageNumber;
+        this.type = type;
+    }
+
+    @Override
+    public String toString() {
+        StringBuffer buf = new StringBuffer();
+        buf.append("name: " + name + " ");
+        buf.append("cr: " + cr + " ");
+        buf.append("xpValue: " + xpValue + " ");
+        buf. append("pageNumber: " + pageNumber + " ");
+        buf.append("type: " + type);
+
+        return buf.toString();
     }
 
 
-    public Integer getId() {return id;}
-    public void setId(Integer id) {this.id = id;}
+    public Long getId() {return id;}
+    public void setId(Long id) {this.id = id;}
 
     public String getName() {
         return name;
     }
     public void setName(String name) {this.name = name;}
 
-    public int getCr() {
+    public float getCr() {
         return cr;
     }
-    public void setCr(int cr) {
+    public void setCr(float cr) {
         this.cr = cr;
     }
 

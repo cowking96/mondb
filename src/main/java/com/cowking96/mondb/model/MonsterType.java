@@ -1,19 +1,21 @@
 package com.cowking96.mondb.model;
 
 public enum MonsterType {
-    Humanoid,
-    Undead,
-    Abberation,
-    Fiend,
-    Elemental,
-    Celestial,
-    Beast,
-    Construct,
-    Dragon,
-    Giant,
-    Monstrocity,
-    Plant,
-    Fey,
-    Ooze,
-    None
+    HUMANOID,
+    UNDEAD,
+    ABERRATION,
+    FIEND,
+    ELEMENTAL,
+    CELESTIAL,
+    BEAST,
+    CONSTRUCT,
+    DRAGON,
+    GIANT,
+    MONSTROSITY,
+    PLANT,
+    FEY,
+    OOZE,
+    NPC,
+    SWARM,
+    NONE
 }

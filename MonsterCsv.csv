@@ -1,0 +1,429 @@
+Animal, Baboon|beast|0|10|318
+Animal, Badger|beast|0|10|318
+Animal, Bat|beast|0|10|318
+Animal, Cat|beast|0|10|320
+Animal, Crab|beast|0|10|320
+Animal, Deer|beast|0|10|321
+Animal, Eagle|beast|0|10|322
+Animal, Frog|beast|0|10|322
+Animal, Goat|beast|0|10|330
+Animal, Hawk|beast|0|10|330
+Animal, Hyena|beast|0|10|331
+Animal, Jackal|beast|0|10|331
+Animal, Lizard|beast|0|10|332
+Animal, Octopus|beast|0|10|333
+Animal, Owl|beast|0|10|333
+Animal, Quipper|beast|0|10|335
+Animal, Rat|beast|0|10|335
+Animal, Raven|beast|0|10|335
+Animal, Sea Horse|beast|0|10|337
+Animal, Vulture|beast|0|10|339
+Animal, Weasel|beast|0|10|340
+Insect, Giant Fire Beetle|beast|0|10|325
+Insect, Scorpion|beast|0|10|337
+Insect, Spider|beast|0|10|337
+Homunculus|construct|0|10|188
+Devil, Lemure|fiend|0|10|76
+Commoner|npc|0|10|345
+Awakened, Shrub|plant|0|10|317
+Myconid Sprout|plant|0|10|230
+Shrieker|plant|0|10|138
+Crawling Claw|undead|0|10|44
+Flumph|aberration|0.125|25|135
+Slaad, Tadpole|aberration|0.125|25|276
+Animal, Blood Hawk|beast|0.125|25|319
+Animal, Camel|beast|0.125|25|320
+Animal, Giant Crab|beast|0.125|25|324
+Animal, Giant Rat|beast|0.125|25|327
+Animal, Giant Weasel|beast|0.125|25|329
+Animal, Horse, Mule|beast|0.125|25|333
+Animal, Horse, Pony|beast|0.125|25|335
+Animal, Mastiff|beast|0.125|25|332
+Animal, Poisonous Snake|beast|0.125|25|334
+Animal, Snake, Flying|beast|0.125|25|322
+Stirge|beast|0.125|25|284
+Modron, Monodrone|construct|0.125|25|224
+Demon, Manes|fiend|0.125|25|60
+Kobold|humanoid|0.125|25|195
+Merfolk|humanoid|0.125|25|218
+Bandit|npc|0.125|25|343
+Cultist|npc|0.125|25|345
+Guard|npc|0.125|25|347
+Noble|npc|0.125|25|348
+Tribal Warrior|npc|0.125|25|350
+Blight, Twig|plant|0.125|25|32
+Animal, Boar|beast|0.25|50|319
+Animal, Constrictor Snake|beast|0.25|50|320
+Animal, Elk|beast|0.25|50|322
+Animal, Giant Badger|beast|0.25|50|323
+Animal, Giant Bat|beast|0.25|50|323
+Animal, Giant Frog|beast|0.25|50|325
+Animal, Giant Lizard|beast|0.25|50|326
+Animal, Giant Owl|beast|0.25|50|327
+Animal, Giant Poisonous Snake|beast|0.25|50|327
+Animal, Horse, Draft|beast|0.25|50|321
+Animal, Horse, Riding|beast|0.25|50|336
+Animal, Panther|beast|0.25|50|333
+Animal, Wolf|beast|0.25|50|341
+Axe Beak|beast|0.25|50|317
+Dinosaur, Pteranodon|beast|0.25|50|80
+Insect, Giant Centipede|beast|0.25|50|323
+Insect, Giant Wolf Spider|beast|0.25|50|330
+Animated, Object Flying Sword|construct|0.25|50|20
+Modron, Duodrone|construct|0.25|50|225
+Pseudodragon|dragon|0.25|50|254
+Mephit, Mud|elemental|0.25|50|216
+Mephit, Smoke|elemental|0.25|50|217
+Mephit, Steam|elemental|0.25|50|217
+Blink Dog|fey|0.25|50|318,
+Pixie|fey|0.25|50|253
+Sprite|fey|0.25|50|283
+Demon, Dretch|fiend|0.25|50|57
+Aarakocra|humanoid|0.25|50|12
+Bullywug|humanoid|0.25|50|35
+Drow|humanoid|0.25|50|126
+Goblin|humanoid|0.25|50|166
+Grimlock|humanoid|0.25|50|175
+Kenku|humanoid|0.25|50|194
+Kobold, Winged|humanoid|0.25|50|195
+Kuo-Toa|humanoid|0.25|50|199
+Troglodyte|humanoid|0.25|50|290
+Acolyte|npc|0.25|50|342
+Blight, Needle|plant|0.25|50|32
+Violet Fungus|plant|0.25|50|138
+Swarm, Bats|swarm|0.25|50|337
+Swarm, Rats|swarm|0.25|50|339
+Swarm, Ravens|swarm|0.25|50|339
+Skeleton|undead|0.25|50|272
+Zombie|undead|0.25|50|316
+Animal, Ape|beast|0.5|100|317
+Animal, Black Bear|beast|0.5|100|318
+Animal, Crocodile|beast|0.5|100|320
+Animal, Giant Goat|beast|0.5|100|326
+Animal, Giant Sea Horse|beast|0.5|100|328
+Animal, Horse, Warhorse|beast|0.5|100|340
+Animal, Reef Shark|beast|0.5|100|336
+Insect, Giant Wasp|beast|0.5|100|329
+Modron, Tridrone|construct|0.5|100|225
+Magman|elemental|0.5|100|212
+Mephit, Dust|elemental|0.5|100|215
+Mephit, Ice|elemental|0.5|100|215
+Mephit, Magma|elemental|0.5|100|216
+Satyr|fey|0.5|100|267
+Gnoll|humanoid|0.5|100|163
+Gnome, Deep (Svirfneblin)|humanoid|0.5|100|164
+Hobgoblin|humanoid|0.5|100|186
+Jackalwere|humanoid|0.5|100|193
+Lizardfolk|humanoid|0.5|100|204
+Orc|humanoid|0.5|100|246
+Sahuagin|humanoid|0.5|100|263
+Cockatrice|monstrosity|0.5|100|42
+Darkmantle|monstrosity|0.5|100|46
+Piercer|monstrosity|0.5|100|252
+Rust Monster|monstrosity|0.5|100|252
+Worg|monstrosity|0.5|100|341
+Scout|npc|0.5|100|349
+Thug|npc|0.5|100|350
+Ooze, Gray|ooze|0.5|100|243
+Blight, Vine|plant|0.5|100|32
+Gas Spore|plant|0.5|100|138
+Myconid, Adult|plant|0.5|100|232
+Swarm, Insects|swarm|0.5|100|338
+Shadow|undead|0.5|100|269
+Skeleton, Warhorse|undead|0.5|100|273
+Animal, Brown Bear|beast|1|200|319
+Animal, Dire Wolf|beast|1|200|321
+Animal, Giant Eagle|beast|1|200|324
+Animal, Giant Hyena|beast|1|200|326
+Animal, Giant Octopus|beast|1|200|326
+Animal, Giant Toad|beast|1|200|329
+Animal, Giant Vulture|beast|1|200|329
+Animal, Lion|beast|1|200|331
+Animal, Tiger|beast|1|200|339
+Insect, Giant Spider|beast|1|200|328
+Animated Object, Armor|construct|1|200|19
+Modron, Quadrone|construct|1|200|226
+Scarecrow|construct|1|200|268
+Dragon, Faerie  (type 1)|dragon|1|200|133
+Dragon, Wyrmling Brass|dragon|1|200|106
+Dragon, Wyrmling Copper|dragon|1|200|112
+Salamander, Fire Snake|elemental|1|200|265
+Dryad|fey|1|200|121
+Demon, Quasit|fiend|1|200|63
+Devil, Imp|fiend|1|200|76
+Ogre, Half-Ogre (Ogrillion)|giant|1|200|238
+Bugbear|humanoid|1|200|33
+Duergar|humanoid|1|200|122
+Goblin, Boss|humanoid|1|200|166
+Kua-Toa, Whip|humanoid|1|200|200
+Thri-Keen|humanoid|1|200|288
+Yuan-Ti, Pureblood|humanoid|1|200|310
+Death Dog|monstrosity|1|200|321
+Harpy|monstrosity|1|200|181
+Hippogriff|monstrosity|1|200|184
+Spy|npc|1|200|349
+Myconid, Quaggoth Spore Servant|plant|1|200|230
+Swarm, Quippers|swarm|1|200|338
+Ghoul|undead|1|200|146
+Specter|undead|1|200|279
+Gibbering Mouther|aberration|2|450|157
+Intellect Devourer|aberration|2|450|191
+Nothic|aberration|2|450|236|
+Animal, Giant Boar|beast|2|450|323
+Animal, Giant Constrictor Snake|beast|2|450|324
+Animal, Giant Elk|beast|2|450|325
+Animal, Hunter Shark|beast|2|450|330
+Animal, Polar Bear|beast|2|450|334
+Animal, Rhinoceros|beast|2|450|336
+Animal, Saber-Toothed Tiger|beast|2|450|336
+Dinosaur, Allosaurus|beast|2|450|79
+Dinosaur, Plesiosaurus|beast|2|450|80
+Pegasus|celestial|2|450|250
+Animated Object, Rug of Smothering|construct|2|450|20
+Modron, Pentadrone|construct|2|450|226
+Dragon, Faerie  (type 2)|dragon|2|450|133
+Dragon, Wyrmling Black|dragon|2|450|88
+Dragon, Wyrmling Bronze|dragon|2|450|109
+Dragon, Wyrmling Green|dragon|2|450|95
+Dragon, Wyrmling Silver|dragon|2|450|118
+Dragon, Wyrmling White|dragon|2|450|102
+Azer|elemental|2|450|22
+Gargoyle|elemental|2|450|140
+Hag, Sea|fey|2|450|179
+Devil, Spined|fiend|2|450|78
+Ogre|giant|2|450|237
+Githyanki, Monk|humanoid|2|450|161
+Gnoll, Pack Lord|humanoid|2|450|163
+Lizardfolk, Shaman|humanoid|2|450|205
+Lycanthrope, Wererat|humanoid|2|450|209
+Orc, Eye of Gruumsh|humanoid|2|450|247
+Orc, Orog|humanoid|2|450|247
+Quaggoth|humanoid|2|450|256
+Sahuagin, Priestess|humanoid|2|450|264
+Ankheg|monstrosity|2|450|21
+Carrion Crawler|monstrosity|2|450|37
+Centaur|monstrosity|2|450|38
+Ettercap|monstrosity|2|450|129
+Grick|monstrosity|2|450|173
+Griffon|monstrosity|2|450|174
+Merrow|monstrosity|2|450|219
+Mimic|monstrosity|2|450|220
+Peryton|monstrosity|2|450|251
+Bandit, Captain|npc|2|450|344
+Berserker|npc|2|450|344
+Cultist, Fanatic|npc|2|450|345
+Druid|npc|2|450|346
+Priest|npc|2|450|348
+Ooze, Gelatinous Cube|ooze|2|450|242
+Ooze, Ochre Jelly|ooze|2|450|243
+Awakened, Tree|plant|2|450|317
+Myconid, Sovereign|plant|2|450|232
+Swarm, Poisonous Snakes|swarm|2|450|338
+Ghast|undead|2|450|146
+Skeleton, Minotaur|undead|2|450|273
+Will-o-Wisp|undead|2|450|301
+Zombie, Ogre|undead|2|450|316
+Beholder, Spectator|aberration|3|700|30
+Grell|aberration|3|700|172
+Animal, Killer Whale|beast|3|700|331
+Dinosaur, Ankylosaurus|beast|3|700|79
+Dinosaur, Triceratops|beast|3|700|80
+Insect, Giant Scorpion|beast|3|700|327
+Dragon, Wyrmling Blue|dragon|3|700|91
+Dragon, Wyrmling Gold|dragon|3|700|115
+Water Weird|elemental|3|700|299
+Hag, Green|fey|3|700|177
+Devil, Bearded|fiend|3|700|70
+Hell Hound|fiend|3|700|182
+Nightmare|fiend|3|700|235
+Bugbear, Chief|humanoid|3|700|33
+Githyanki, Warrior|humanoid|3|700|160
+Hobgoblin, Captain|humanoid|3|700|186
+Lycanthrope, Werewolf|humanoid|3|700|211
+Basilisk|monstrosity|3|700|24
+Displacer Beast|monstrosity|3|700|81
+Doppelganger|monstrosity|3|700|82
+Hook Horror|monstrosity|3|700|189
+Manticore|monstrosity|3|700|213
+Minotaur|monstrosity|3|700|223
+Owlbear|monstrosity|3|700|249
+Phase Spider|monstrosity|3|700|334
+Winter Wolf|monstrosity|3|700|340
+Yeti|monstrosity|3|700|305
+Yuan-Ti, Malison|monstrosity|3|700|309
+Knight|npc|3|700|347
+Veteran|npc|3|700|350
+Mummy|undead|3|700|228
+Wight|undead|3|700|300
+Chuul|aberration|4|1100|40
+Animal, Elephant|beast|4|1100|322
+Couatl|celestial|4|1100|43
+Helmed Horror|construct|4|1100|183
+Dragon, Wyrmling Red|dragon|4|1100|98
+Demon, Shadow|fiend|4|1100|64
+Succubus or Incubus|fiend|4|1100|285
+Ettin|giant|4|1100|130
+Gnoll, Fang of Yeenoghu|humanoid|4|1100|163
+Lizardfolk, King/Queen|humanoid|4|1100|205
+Lycanthrope, Wereboar|humanoid|4|1100|209
+Lycanthrope, Weretiger|humanoid|4|1100|210
+Orc, War Chief|humanoid|4|1100|246
+Lamia|monstrosity|4|1100|201
+Ooze, Black Pudding|ooze|4|1100|241
+Banshee|undead|4|1100|23
+Flameskull|undead|4|1100|134
+Ghost|undead|4|1100|147
+Naga, Bone|undead|4|1100|233
+Otyugh|aberration|5|1800|248
+Slaad, Red|aberration|5|1800|276
+Animal, Giant Crocodile|beast|5|1800|324
+Animal, Giant Shark|beast|5|1800|328
+Unicorn|celestial|5|1800|294
+Golem, Flesh|construct|5|1800|169
+Elemental, Air|elemental|5|1800|124
+Elemental, Earth|elemental|5|1800|124
+Elemental, Fire|elemental|5|1800|125
+Elemental, Water|elemental|5|1800|125
+Salamander, Fire Snake|elemental|5|1800|266
+Xorn|elemental|5|1800|304
+Hag, Night|fey|5|1800|178
+Cambion|fiend|5|1800|36
+Demon, Barlgura|fiend|5|1800|56
+Devil, Barbed|fiend|5|1800|70
+Yuggoloth, Mezzoloth|fiend|5|1800|313
+Giant, Hill|giant|5|1800|155
+Troll|giant|5|1800|291
+Drow, Elite Warrior|humanoid|5|1800|126
+Half Dragon, Red, Veteran|humanoid|5|1800|180
+Lycanthrope, Werebear|humanoid|5|1800|208
+Sahuagin, Baron|humanoid|5|1800|264
+Bulete|monstrosity|5|1800|34
+Gorgon|monstrosity|5|1800|171
+Remorhaz, Young|monstrosity|5|1800|258
+Roper|monstrosity|5|1800|261
+Umber Hulk|monstrosity|5|1800|292
+Gladiator|npc|5|1800|346
+Shambling Mound|plant|5|1800|270
+Revenant|undead|5|1800|259
+Vampire, Spawn|undead|5|1800|298
+Wraith|undead|5|1800|302
+Zombie, Beholder|undead|5|1800|316
+Animal, Mammoth|beast|6|2300|332
+Dragon, Young Brass|dragon|6|2300|105
+Dragon, Young White|dragon|6|2300|101
+Wyvern|dragon|6|2300|303
+Galeb Duhr|elemental|6|2300|139
+Invisible Stalker|elemental|6|2300|192
+Demon, Chasme|fiend|6|2300|57
+Demon, Vrock|fiend|6|2300|64
+Cyclops|giant|6|2300|45
+Githyanki, Zerth|humanoid|6|2300|161
+Hobgoblin, Warlord|humanoid|6|2300|187
+Kua-Toa, Archpriest|humanoid|6|2300|200
+Chimera|monstrosity|6|2300|39
+Drow, Drider|monstrosity|6|2300|120
+Medusa|monstrosity|6|2300|214
+Mage|npc|6|2300|347
+Mind Flayer|aberration|7|2900|222
+Slaad, Blue|aberration|7|2900|276
+Animal, Giant Ape|beast|7|2900|323
+Shield Guardian|construct|7|2900|271
+Dragon, Young Black|dragon|7|2900|88
+Dragon, Young Copper|dragon|7|2900|111
+Giant, Stone|giant|7|2900|156
+Ogre, Oni|giant|7|2900|239
+Drow, Mage|humanoid|7|2900|127
+Grick, Alpha|monstrosity|7|2900|173
+Yuan-Ti, Abomination|monstrosity|7|2900|308
+Cloaker|aberration|8|3900|41
+Slaad, Green|aberration|8|3900|277
+Dinosaur, Tyrannosaurus Rex|beast|8|3900|80
+Dragon, Young Bronze|dragon|8|3900|108
+Dragon, Young Green|dragon|8|3900|94
+Demon, Hezrou|fiend|8|3900|60
+Devil, Chain|fiend|8|3900|72
+Giant, Fomorian|giant|8|3900|136
+Giant, Frost|giant|8|3900|155
+Drow, Priestess of Lolth|humanoid|8|3900|127
+Githyanki, Knight|humanoid|8|3900|160
+Hydra|monstrosity|8|3900|190
+Naga, Spirit|monstrosity|8|3900|234
+Assassin|npc|8|3900|343
+Slaad, Gray|aberration|9|5000|277
+Golem, Clay|construct|9|5000|168
+Dragon, Young Blue|dragon|9|5000|91
+Dragon, Young Silver|dragon|9|5000|118
+Demon, Glabrezu|fiend|9|5000|58
+Devil, Bone|fiend|9|5000|7
+Yuggoloth, Nycaloth|fiend|9|5000|314
+Giant, Cloud|giant|9|5000|154
+Giant, Fire|giant|9|5000|154
+Yeti, Abominable|monstrosity|9|5000|306
+Treant|plant|9|5000|289
+Aboleth|aberration|10|5900|13
+Sladdi, Death|aberration|10|5900|278
+Angel, Deva|celestial|10|5900|16
+Golem, Stone|construct|10|5900|170
+Dragon, Young Gold|dragon|10|5900|115
+Dragon, Young Red|dragon|10|5900|98
+Demon, Yochlol|fiend|10|5900|65
+Naga, Guardian|monstrosity|10|5900|234
+Beholder|aberration|11|7200|28
+Genie, Dao|elemental|11|7200|143
+Genie, Djinni|elemental|11|7200|144
+Genie, Efreeti|elemental|11|7200|145
+Genie, Madrid|elemental|11|7200|146
+Devil, Horned|fiend|11|7200|74
+Behir|monstrosity|11|7200|25
+Remorhaz|monstrosity|11|7200|258
+Roc|monstrosity|11|7200|260
+Sphinx, Gynosphinx|monstrosity|11|7200|282
+Devil, Erinyes|fiend|12|8400|73
+Yuggoloth, Arcanaloth|fiend|12|8400|313
+Archmage|npc|12|8400|342
+Dragon, Adult Brass|dragon|13|10000|105
+Dragon, Adult White|dragon|13|10000|101
+Dragon, Shadow, Young Red|dragon|13|10000|85
+Demon, Nalfeshnee|fiend|13|10000|62
+Rakshasa|fiend|13|10000|257
+Yuggoloth, Ultraloth|fiend|13|10000|314
+Giant, Storm|giant|13|10000|156
+Vampire|undead|13|10000|297
+Dragon, Adult Black|dragon|14|11500|88
+Dragon, Adult Copper|dragon|14|11500|111
+Devil, Ice|fiend|14|11500|75
+Beholder, Death Tyrant|undead|14|11500|29
+Dragon, Adult Bronze|dragon|15|13000|108
+Dragon, Adult Green|dragon|15|13000|94
+Purple Worm|monstrosity|15|13000|255
+Mummy, Lord|undead|15|13000|229
+Angel, Planetar|celestial|16|15000|17
+Golem, Iron|construct|16|15000|170
+Dragon, Adult Blue|dragon|16|15000|91
+Dragon, Adult Silver|dragon|16|15000|117
+Demon, Marilith|fiend|16|15000|61
+Dragon Turtle|dragon|17|18000|119
+Dragon, Adult Gold|dragon|17|18000|114
+Dragon, Adult Red|dragon|17|18000|98
+Demon, Goristro|fiend|17|18000|59
+Sphinx, Androsphinx|monstrosity|17|18000|281
+Death Knight|undead|17|18000|47
+Dracolich, Adult Blue|undead|17|18000|84
+Demilich|undead|18|20000|48
+Demon, Balor|fiend|19|22000|55
+Dragon, Ancient Brass|dragon|20|25000|104
+Dragon, Ancient White|dragon|20|25000|100
+Devil, Pit Fiend|fiend|20|25000|77
+Angel, Solar|celestial|21|33000|18
+Dragon, Ancient Black|dragon|21|33000|87
+Dragon, Ancient Copper|dragon|21|33000|110
+Lich|undead|21|33000|202
+Dragon, Ancient Bronze|dragon|22|41000|107
+Dragon, Ancient Green|dragon|22|41000|93
+Empyrean|celestial|23|50000|128
+Dragon, Ancient Blue|dragon|23|50000|90
+Dragon, Ancient Silver|dragon|23|50000|116
+Kraken|monstrosity|23|50000|197
+Dragon, Ancient Gold|dragon|24|62000|113
+Dragon, Ancient Red|dragon|24|62000|97
+Tarrasque|monstrosity|30|155000|286
