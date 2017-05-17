@@ -8,7 +8,5 @@ import org.springframework.stereotype.Component;
 @Component
 @ConfigurationProperties(prefix = "jpa")
 public class JpaProperties {
-
-
-    }
+}
 

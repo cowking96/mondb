@@ -13,7 +13,7 @@ import java.util.List;
 @Service
 public class MonsterServiceImpl implements MonsterService {
 
-    static final Logger LOG = LoggerFactory.getLogger(MonsterServiceImpl.class);
+    private static final Logger LOG = LoggerFactory.getLogger(MonsterServiceImpl.class);
 
     @Autowired
     private MonsterRepository monsterRepository;

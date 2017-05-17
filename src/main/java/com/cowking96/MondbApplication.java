@@ -11,7 +11,7 @@ import static org.springframework.boot.Banner.Mode.OFF;
 
 @SpringBootApplication
 public class MondbApplication {
-	static final Logger LOG = LoggerFactory.getLogger(MondbApplication.class);
+	private static final Logger LOG = LoggerFactory.getLogger(MondbApplication.class);
 
 	public static void main(String[] args) {
 
