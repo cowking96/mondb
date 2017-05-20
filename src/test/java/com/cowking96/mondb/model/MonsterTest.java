@@ -4,6 +4,7 @@ import org.junit.Test;
 import static com.google.common.truth.Truth.assertThat;
 
 public class MonsterTest {
+
     @Test
     public void empty_construction(){
         Monster exampleMonster = new Monster();

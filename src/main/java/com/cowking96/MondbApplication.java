@@ -1,6 +1,6 @@
 package com.cowking96;
 
-import com.cowking96.mondb.util.CsvFileReader;
+import com.cowking96.mondb.util.DatabaseCreator;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -15,16 +15,25 @@ public class MondbApplication {
 
 	public static void main(String[] args) {
 
-		LOG.debug("Application starting");
-		new SpringApplicationBuilder()
-				.bannerMode(OFF)
-				.sources(MondbApplication.class)
-				.run(args);
+		try {
+
+			LOG.debug("Application starting");
+
+
+			new SpringApplicationBuilder()
+					.bannerMode(OFF)
+					.sources(MondbApplication.class)
+					.run(args);
+		} catch(Exception e) {
+			LOG.error("Unexpected and unhandled exception during operation. Details follow...");
+			LOG.error("Exception was of type: {} with message: {}", e.getClass() ,e.getMessage());
+			e.printStackTrace();
+		}
 	}
 
 	@Bean
-	public boolean loadMonsterData(){
-		CsvFileReader.loadData();
+	public boolean loadMonsterData(DatabaseCreator databaseCreator) {
+		databaseCreator.loadData();
 		return true;
 	}
 
