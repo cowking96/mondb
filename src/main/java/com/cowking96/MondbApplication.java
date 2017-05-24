@@ -1,6 +1,7 @@
 package com.cowking96;
 
 import com.cowking96.mondb.util.DatabaseCreator;
+import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
