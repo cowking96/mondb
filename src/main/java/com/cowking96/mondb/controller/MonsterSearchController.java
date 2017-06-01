@@ -2,7 +2,9 @@ package com.cowking96.mondb.controller;
 
 import com.cowking96.mondb.model.Monster;
 import com.cowking96.mondb.model.MonsterType;
+import com.cowking96.mondb.service.MonsterPredicateBuilder;
 import com.cowking96.mondb.util.ControllerError;
+import com.querydsl.core.BooleanBuilder;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -26,15 +28,17 @@ public class MonsterSearchController {
     public ResponseEntity<?> searchForMonsters (@RequestParam(required = false) String name,
         @RequestParam(required = false) MonsterType type,
         @RequestParam(required = false) Float cr,
+        @RequestParam(required = false) String crComparison,
         @RequestParam(required = false) Integer xpValue,
         @RequestParam(required = false) String pageNumber){
 
         try {
 
-            Iterable<Monster> monsters = monsterService.findByCriteria(name, type, cr, xpValue, pageNumber);
+            Iterable<Monster> monsters = monsterService.findByCriteria(name,type,cr,crComparison,xpValue,pageNumber);
             return new ResponseEntity<Iterable<Monster>>(monsters, HttpStatus.OK);
 
         } catch(Exception e) {
+            e.printStackTrace();
             return new ResponseEntity<ControllerError>(new ControllerError(e), HttpStatus.INTERNAL_SERVER_ERROR);
         }
     }
