@@ -23,7 +23,7 @@ public class MonsterServiceImpl implements MonsterService {
         this.predicateBuilder = predicateBuilder;
     }
 
-    public Iterable<Monster> findByCriteria(String name, MonsterType type, Float cr, String crComparison, Integer xpValue, String pageNumber) {
+    public Iterable<Monster> findByCriteria(String name, MonsterType type[], Float cr, String crComparison, Integer xpValue, String pageNumber) {
 
         Predicate predicate = predicateBuilder.buildPredicate(name, type, cr, crComparison, xpValue, pageNumber);
 

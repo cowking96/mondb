@@ -2,6 +2,7 @@ package com.cowking96.mondb.service;
 
 import com.cowking96.mondb.model.MonsterType;
 import com.querydsl.core.types.Predicate;
+import org.junit.Ignore;
 import org.junit.Test;
 
 import static com.google.common.truth.Truth.assertThat;
@@ -31,7 +32,8 @@ public class MonsterPredicateBuilderTest {
 
         MonsterPredicateBuilder monsterPredicateBuilder = new MonsterPredicateBuilder();
 
-        Predicate predicate = monsterPredicateBuilder.buildPredicate(null, MonsterType.BEAST,null,null,null,null);
+        MonsterType[] types = {MonsterType.BEAST};
+        Predicate predicate = monsterPredicateBuilder.buildPredicate(null,types,null,null,null,null);
         assertThat(predicate.toString()).isEqualTo("monster.type = BEAST");
     }
 
@@ -143,6 +145,14 @@ public class MonsterPredicateBuilderTest {
         assertThat(predicate).isNull();
     }
 
+    @Test
+    public void should_build_multitype_predicate() {
 
+        MonsterType[] types = {MonsterType.BEAST,MonsterType.CELESTIAL};
 
+        MonsterPredicateBuilder monsterPredicateBuilder = new MonsterPredicateBuilder();
+
+        Predicate predicate = monsterPredicateBuilder.buildPredicate(null, types, null, null, null, null);
+        assertThat(predicate.toString()).isEqualTo("monster.type = BEAST || monster.type = CELESTIAL");
+    }
 }

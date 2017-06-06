@@ -1,7 +1,5 @@
 package com.cowking96.mondb.service;
 
-import com.cowking96.mondb.dao.MonsterRepository;
-import com.cowking96.mondb.dao.QMonster;
 import com.cowking96.mondb.model.MonsterType;
 import com.querydsl.core.BooleanBuilder;
 import com.querydsl.core.types.Predicate;
@@ -15,7 +13,7 @@ public class MonsterPredicateBuilder {
 
     private static final Logger LOG = LoggerFactory.getLogger(MonsterPredicateBuilder.class);
 
-    public Predicate buildPredicate(String name, MonsterType type, Float cr, String crComparison, Integer xpValue, String pageNumber){
+    public Predicate buildPredicate(String name, MonsterType[] types, Float cr, String crComparison, Integer xpValue, String pageNumber){
 
         if(crComparison == null){
             crComparison = "=";
@@ -29,11 +27,11 @@ public class MonsterPredicateBuilder {
             }
         }
 
-        if(cr != null){
+        if(cr != null) {
             builder = crParameter(builder, cr, crComparison);
         }
 
-        if(xpValue != null){
+        if(xpValue != null) {
             builder = builder.and(monster.xpValue.eq(xpValue));
         }
 
@@ -41,8 +39,19 @@ public class MonsterPredicateBuilder {
             builder = builder.and(monster.pageNumber.equalsIgnoreCase(pageNumber));
         }
 
-        if(type != null){
-            builder = builder.and(monster.type.eq(type));
+        if(types != null){
+            if(types.length == 1) {
+                builder = builder.and((monster.type.eq(types[0])));
+            } else {
+
+                BooleanBuilder orBuilder = new BooleanBuilder();
+                for(MonsterType t : types) {
+                    orBuilder = orBuilder.or(monster.type.eq(t));
+                }
+
+                builder = builder.andAnyOf(orBuilder.getValue());
+
+            }
         }
 
         return builder.getValue();
