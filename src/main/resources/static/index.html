@@ -4,29 +4,140 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-    <link rel="stylesheet" href="css/jquery-ui.min.css">
+    <link rel="stylesheet" href="js/jquery/jquery-ui.min.css">
     <script src="js/jquery/external/jquery/jquery.js"></script>
     <script src="js/jquery/jquery-ui.min.js"></script>
 </head>
 
 <body>
-meme
 
-<form style="margin-top: 1em;">
-    <div id="radioset">
-        <input type="radio" id="radio1" name="radio"><label for="radio1">Choice 1</label>
-        <input type="radio" id="radio2" name="radio" checked="checked"><label for="radio2">Choice 2</label>
-        <input type="radio" id="radio3" name="radio"><label for="radio3">Choice 3</label>
+<div id="tabs">
+
+    <ul>
+        <li><a href="#tabs-monstersearch">Search</a></li>
+        <li><a href="#tabs-monstersearchresults">Search Results</a></li>
+        <li><a href="#tabs-encounterbuilder">Builder</a></li>
+        <li><a href="#tabs-encounterbuilderresults">Builder Results</a></li>
+    </ul>
+
+
+    <div id="tabs-monstersearch">
+        <h3>search parameters</h3>
+        <p>Enter search parameters here.</p>
+
+        <form>
+            Monster name:<br/>
+            <input type="text" name="monstername" value="" id="monstername">
+
+
+            <select name="name comparison" id="namecompareselect">
+                <option value="is">is</option>
+                <option value="contains">contains</option>
+                <option value="starts with">starts with</option>
+                <option value="ends with">ends with</option>
+            </select>
+
+            <br/>
+
+            Monster CR:<br/>
+                <select name="Cr" id="crselect">
+                    <option value=".125">1/8</option>
+                    <option value=".25">1/4 </option>
+                    <option value=".5">1/2</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                    <option value="11">11</option>
+                    <option value="12">12</option>
+                    <option value="13">13</option>
+                    <option value="14">14</option>
+                    <option value="15">15</option>
+                    <option value="16">16</option>
+                    <option value="17">17</option>
+                    <option value="18">18</option>
+                    <option value="19">19</option>
+                    <option value="20">20</option>
+                    <option value="21">21</option>
+                    <option value="22">22</option>
+                    <option value="23">23</option>
+                    <option value="24">24</option>
+                    <option value="25">25</option>
+                </select>
+
+            <br/>
+
+            Monster Type<br/>
+            <fieldset>
+                <div id="monsterTypes">
+                    <label for="abberation-type">Abberation</label>
+                    <input type="checkbox" name="Abberation" id="abberation-type"> <br/>
+                    <label for="beast-type">Beast</label>
+                    <input type="checkbox" name="Beast" id="beast-type"> <br/>
+                    <label for="dragon-type">Dragon</label>
+                    <input type="checkbox" name="Dragon" id="dragon-type"> <br/>
+                    <label for="elemental-type">Elemental</label>
+                    <input type="checkbox" name="Elemental" id="elemental-type"> <br/>
+                    <label for="fiend-type">Fiend</label>
+                    <input type="checkbox" name="Fiend" id="fiend-type"> <br/>
+                    <label for="giant-type">Giant</label>
+                    <input type="checkbox" name="Giant" id="giant-type"> <br/>
+                    <label for="monstrocity-type">Monstrocity</label>
+                    <input type="checkbox" name="Monstrocity" id="monstrocity-type"> <br/>
+                    <label for="npc-type">NPC</label>
+                    <input type="checkbox" name="NPC" id="npc-type"> <br/>
+                    <label for="ooze-type">Ooze</label>
+                    <input type="checkbox" name="Ooze" id="ooze-type"> <br/>
+                    <label for="swarm-type">Swarm</label>
+                    <input type="checkbox" name="Swarm" id="swarm-type"> <br/>
+                    <label for="undead-type">Undead</label>
+                    <input type="checkbox" name="Undead" id="undead-type"> <br/>
+                </div>
+            </fieldset>
+
+            <input type="submit" value="Submit">
+        </form>
     </div>
-</form>
 
-<a href="error.html" > link to error page </a>
+
+
+
+
+
+
+    <div id="tabs-monstersearchresults">
+        <h3>results</h3>
+        <p>here are the results of the search.</p>
+    </div>
+
+    <div id="tabs-encounterbuilder">
+        <h3>encounter builder</h3>
+        <p>encounter builder parameters</p>
+    </div>
+
+    <div id="tabs-encounterbuilderresults">
+        <h3>encounter results</h3>
+        <p>results of encounter builder.</p>
+    </div>
+
+</div>
+
 
 <script>
-window.onload = function(){
-    $( "input" ).checkboxradio();
-}
-  </script>
+$(document).ready(function(){
+    $( "#monsterTypes" ).controlgroup();
+    $( "#crselect" ).selectmenu();
+    $( "#namecompareselect" ).selectmenu();
+    $( "#monstername" ).autocomplete();
+    $( "#tabs" ).tabs();
+});
+</script>
 
 </body>
 </html>
