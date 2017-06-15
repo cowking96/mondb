@@ -16,6 +16,7 @@ Core = {
 
                 //bind callbacks on control change
                 this.bindMonsterNameChange();
+                this.bindMonsterCrChange();
 
     },
 
@@ -34,13 +35,26 @@ Core = {
         });
     },
 
-    onSubmit: function(){
+    bindMonsterCrChange: function() {
 
+           $( "#crselect" ).selectmenu({
+              change: function( event, ui ) {
+                var value = $( "#crselect" ).val();
+                if(value == "any"){
+                    $( "#crcompareselect" ).selectmenu("disable");
+                }
+                else{
+                    $( "#crcompareselect" ).selectmenu("enable");
+                }
+              }
+            });
+        },
+
+    getName: function(){
         var name = $('#monstername').val();
-        var crcompareselect = $('#crcompareselect').val();
+        var nameCompare = $('#namecompareselect').val();
 
-        var nameSearch = $('#namecompareselect').val()
-        switch(nameSearch) {
+        switch(nameCompare) {
 
             case "starts with":
                 name = name + "*";
@@ -53,8 +67,52 @@ Core = {
             case "contains":
                 name = "*" + name + "*";
                 break;
+         }
+    return name;
+
+ },
+
+ getCr: function() {
+    var monsterCr = $('#crselect').val();
+    if(monsterCr == 'any'){
+        monsterCr = null;
+    }
+    return monsterCr;
+ },
+
+ getCrComparison: function() {
+  var monsterCrCompare = $('#crcompareselect').val();
+  if($('#crcompareselect'))
+  return monsterCrCompare;
+ },
+
+ getMonsterTypes: function() {
+    var selectedTypes = [];
+    $('input,[type="checkbox"]').each(function () {
+        if (this.checked) {
+            selectedTypes.push(this.name);
         }
 
-        alert('Name: ' + name + 'CrThing: ' + crcompareselect);
-    }
+    });
+    return selectedTypes;
+ },
+
+
+ onSubmit: function(){
+    var monsterSearch = new MonsterSearch();
+    monsterSearch.name = this.getName();
+    monsterSearch.cr = this.getCr();
+    monsterSearch.crComparison = this.getCrComparison();
+    monsterSearch.selectedTypes = this.getMonsterTypes();
+    alert("monster name: " + monsterSearch.name+ " monster cr: " + monsterSearch.cr + " cr comparison: " + monsterSearch.crComparison+ " monster types: " + monsterSearch.selectedTypes);
+
+ }
+
+}
+
+function MonsterSearch() {
+this.name="";
+this.cr=0;
+this.crComparison="";
+this.selectedTypes=[];
 }
