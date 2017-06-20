@@ -51,7 +51,7 @@ public class MonsterPredicateBuilderTest {
 
         MonsterPredicateBuilder monsterPredicateBuilder = new MonsterPredicateBuilder();
 
-        Predicate predicate = monsterPredicateBuilder.buildPredicate(null,null,1.0f,"<",null,null);
+        Predicate predicate = monsterPredicateBuilder.buildPredicate(null,null,1.0f,"<=",null,null);
         assertThat(predicate.toString()).isEqualTo("monster.cr <= 1.0");
     }
 
@@ -60,7 +60,7 @@ public class MonsterPredicateBuilderTest {
 
         MonsterPredicateBuilder monsterPredicateBuilder = new MonsterPredicateBuilder();
 
-        Predicate predicate = monsterPredicateBuilder.buildPredicate(null,null,1.0f,">",null,null);
+        Predicate predicate = monsterPredicateBuilder.buildPredicate(null,null,1.0f,">=",null,null);
         assertThat(predicate.toString()).isEqualTo("monster.cr >= 1.0");
     }
 
@@ -105,7 +105,7 @@ public class MonsterPredicateBuilderTest {
 
         MonsterPredicateBuilder monsterPredicateBuilder = new MonsterPredicateBuilder();
 
-        Predicate predicate = monsterPredicateBuilder.buildPredicate("Orc",null,1.0f,">",null,null);
+        Predicate predicate = monsterPredicateBuilder.buildPredicate("Orc",null,1.0f,">=",null,null);
         assertThat(predicate.toString()).isEqualTo("eqIc(monster.name,Orc) && monster.cr >= 1.0");
     }
 

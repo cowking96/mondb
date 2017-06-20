@@ -7,7 +7,7 @@ Core = {
                 $( "#crselect" ).selectmenu();
                 $( "#namecompareselect" ).selectmenu();
                 $( "#crcompareselect" ).selectmenu();
-                $( "#monstername" ).autocomplete();
+//                $( "#monstername" ).autocomplete();
                 $( "#tabs" ).tabs();
 
                 //disable comparison selectors initially until assoc widget used
@@ -17,6 +17,7 @@ Core = {
                 //bind callbacks on control change
                 this.bindMonsterNameChange();
                 this.bindMonsterCrChange();
+                this.bindMonsterSearchSubmit();
 
     },
 
@@ -50,6 +51,14 @@ Core = {
             });
         },
 
+    bindMonsterSearchSubmit: function() {
+
+        $("#searchSubmit").click(function() {
+            Core.onSubmit();
+        });
+
+    },
+
     getName: function(){
         var name = $('#monstername').val();
         var nameCompare = $('#namecompareselect').val();
@@ -68,6 +77,11 @@ Core = {
                 name = "*" + name + "*";
                 break;
          }
+
+        if(name.trim().length==0){
+            name=null;
+            nameCompare=null;
+        }
     return name;
 
  },
@@ -82,7 +96,9 @@ Core = {
 
  getCrComparison: function() {
   var monsterCrCompare = $('#crcompareselect').val();
-  if($('#crcompareselect'))
+  if($('#crselect').val()=="any"){
+  monsterCrCompare = null;
+  }
   return monsterCrCompare;
  },
 
@@ -93,18 +109,29 @@ Core = {
             selectedTypes.push(this.name);
         }
 
+        if(selectedTypes.length==0){
+            return null;
+        }
+
     });
     return selectedTypes;
  },
 
 
  onSubmit: function(){
+
     var monsterSearch = new MonsterSearch();
+
     monsterSearch.name = this.getName();
     monsterSearch.cr = this.getCr();
     monsterSearch.crComparison = this.getCrComparison();
     monsterSearch.selectedTypes = this.getMonsterTypes();
-    alert("monster name: " + monsterSearch.name+ " monster cr: " + monsterSearch.cr + " cr comparison: " + monsterSearch.crComparison+ " monster types: " + monsterSearch.selectedTypes);
+
+    $.post("http://localhost:8080/monsters",monsterSearch,function(data, status, jqXHR) {
+
+        alert(data);
+
+    });
 
  }
 

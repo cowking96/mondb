@@ -59,17 +59,18 @@ public class MonsterPredicateBuilder {
 
     private BooleanBuilder crParameter(BooleanBuilder builder,Float cr,String crComparison){
 
-        if(crComparison.equals(">")){
+        if(crComparison.equals(">=")){
             return builder = builder.and(monster.cr.goe(cr));
         }
 
-        if (crComparison .equals("<")){
+        if (crComparison .equals("<=")){
             return builder = builder.and(monster.cr.loe(cr));
         }
 
         if(crComparison.equals("=")){
             return builder = builder.and(monster.cr.eq(cr));
         }
+
         else {
             LOG.warn("Ignoring invalid cr comparison string: {}", crComparison);
             return builder = builder.and(monster.cr.eq(cr));

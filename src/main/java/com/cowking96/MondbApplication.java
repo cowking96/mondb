@@ -10,7 +10,7 @@ import org.springframework.context.annotation.Bean;
 
 import static org.springframework.boot.Banner.Mode.OFF;
 
-@SpringBootApplication
+@SpringBootApplication(scanBasePackages = {"com.cowking96"})
 public class MondbApplication {
 	private static final Logger LOG = LoggerFactory.getLogger(MondbApplication.class);
 

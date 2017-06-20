@@ -39,11 +39,11 @@ public class MonsterSearchInfo {
         this.name = name;
     }
 
-    public void setCr(float cr) {
+    public void setCr(Float cr) {
         this.cr = cr;
     }
 
-    public void setXpValue(int xpValue) {
+    public void setXpValue(Integer xpValue) {
         this.xpValue = xpValue;
     }
 
