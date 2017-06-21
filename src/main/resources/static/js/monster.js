@@ -59,9 +59,16 @@ Core = {
 
     },
 
-    getName: function(){
+    getName: function() {
+
         var name = $('#monstername').val();
         var nameCompare = $('#namecompareselect').val();
+
+        if(name.trim().length==0){
+            name=null;
+            nameCompare=null;
+            return name;
+        }
 
         switch(nameCompare) {
 
@@ -78,18 +85,13 @@ Core = {
                 break;
          }
 
-        if(name.trim().length==0){
-            name=null;
-            nameCompare=null;
-        }
     return name;
-
  },
 
  getCr: function() {
     var monsterCr = $('#crselect').val();
     if(monsterCr == 'any'){
-        monsterCr = null;
+        monsterCr = -1;
     }
     return monsterCr;
  },
@@ -103,18 +105,18 @@ Core = {
  },
 
  getMonsterTypes: function() {
-    var selectedTypes = [];
+    var type = [];
     $('input,[type="checkbox"]').each(function () {
         if (this.checked) {
-            selectedTypes.push(this.name);
+            type.push(this.name);
         }
 
-        if(selectedTypes.length==0){
+        if(type.length==0){
             return null;
         }
 
     });
-    return selectedTypes;
+    return type;
  },
 
 
@@ -125,7 +127,7 @@ Core = {
     monsterSearch.name = this.getName();
     monsterSearch.cr = this.getCr();
     monsterSearch.crComparison = this.getCrComparison();
-    monsterSearch.selectedTypes = this.getMonsterTypes();
+    monsterSearch.type = this.getMonsterTypes();
 
     $.post("http://localhost:8080/monsters",monsterSearch,function(data, status, jqXHR) {
 
@@ -141,5 +143,5 @@ function MonsterSearch() {
 this.name="";
 this.cr=0;
 this.crComparison="";
-this.selectedTypes=[];
+this.type=[];
 }

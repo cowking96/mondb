@@ -25,6 +25,10 @@ public class MonsterServiceImpl implements MonsterService {
 
     public Iterable<Monster> findByCriteria(String name, MonsterType type[], Float cr, String crComparison, Integer xpValue, String pageNumber) {
 
+        if(cr < 0) {
+            cr = null;
+        }
+        
         Predicate predicate = predicateBuilder.buildPredicate(name, type, cr, crComparison, xpValue, pageNumber);
 
         if(predicate == null){
