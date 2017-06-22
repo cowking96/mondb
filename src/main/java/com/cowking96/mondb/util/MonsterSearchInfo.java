@@ -1,13 +1,17 @@
 package com.cowking96.mondb.util;
 
 import com.cowking96.mondb.model.MonsterType;
+import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
+
+import java.util.Arrays;
 
 public class MonsterSearchInfo {
+
     private String name;
     private Float cr;
     private Integer xpValue;
     private String pageNumber;
-    private MonsterType[] type;
+    private String[] type;
     private String crComparison;
 
     public MonsterSearchInfo() {
@@ -15,15 +19,15 @@ public class MonsterSearchInfo {
         cr = null;
         xpValue = null;
         pageNumber = null;
-        MonsterType[] type = null;
         crComparison = null;
+        type = null;
     }
 
-    public MonsterType[] getType() {
+    public String[] getType() {
         return type;
     }
 
-    public void setType(MonsterType[] type) {
+    public void setType(String[] type) {
         this.type = type;
     }
 
@@ -65,6 +69,22 @@ public class MonsterSearchInfo {
 
     public String getPageNumber() {
         return pageNumber;
+    }
+
+    public MonsterType[] stringToMonsterType(){
+        return new MonsterType[] {MonsterType.BEAST};
+    }
+
+    @Override
+    public String toString() {
+        return "MonsterSearchInfo{" +
+                "name='" + name + '\'' +
+                ", cr=" + cr +
+                ", xpValue=" + xpValue +
+                ", pageNumber='" + pageNumber + '\'' +
+                ", type=" + Arrays.toString(type) +
+                ", crComparison='" + crComparison + '\'' +
+                '}';
     }
 
 }

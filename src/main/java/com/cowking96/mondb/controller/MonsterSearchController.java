@@ -30,9 +30,11 @@ public class MonsterSearchController {
     public ResponseEntity<?> searchForMonsters(MonsterSearchInfo monsterSearchInfo) {
 
         try {
-            LOG.debug("The post function has been called");
+
+            LOG.debug("The post function has been called with search info: {}", monsterSearchInfo.toString());
+
             Iterable<Monster> monsters = monsterService.findByCriteria(monsterSearchInfo.getName(),
-                    monsterSearchInfo.getType(),monsterSearchInfo.getCr(),
+                    monsterSearchInfo.stringToMonsterType(),monsterSearchInfo.getCr(),
                     monsterSearchInfo.getCrComparison(),monsterSearchInfo.getXpValue(),monsterSearchInfo.getPageNumber());
 
             return new ResponseEntity<Iterable<Monster>>(monsters, HttpStatus.OK);
@@ -55,9 +57,9 @@ public class MonsterSearchController {
 
         try {
 
-//            Iterable<Monster> monsters = monsterService.findByCriteria(name,type,cr,crComparison,xpValue,pageNumber);
-//            return new ResponseEntity<Iterable<Monster>>(monsters, HttpStatus.OK);
-               return new ResponseEntity<String>(new String(""), HttpStatus.OK);
+            Iterable<Monster> monsters = monsterService.findByCriteria(name,type,cr,crComparison,xpValue,pageNumber);
+            return new ResponseEntity<Iterable<Monster>>(monsters, HttpStatus.OK);
+
         } catch(Exception e) {
             e.printStackTrace();
             return new ResponseEntity<ControllerError>(new ControllerError(e), HttpStatus.INTERNAL_SERVER_ERROR);

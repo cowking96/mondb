@@ -28,7 +28,7 @@ public class MonsterServiceImpl implements MonsterService {
         if(cr < 0) {
             cr = null;
         }
-        
+
         Predicate predicate = predicateBuilder.buildPredicate(name, type, cr, crComparison, xpValue, pageNumber);
 
         if(predicate == null){

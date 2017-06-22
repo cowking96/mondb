@@ -108,7 +108,7 @@ Core = {
     var type = [];
     $('input,[type="checkbox"]').each(function () {
         if (this.checked) {
-            type.push(this.name);
+            type.push(this.name.toUpperCase());
         }
 
         if(type.length==0){
@@ -120,28 +120,29 @@ Core = {
  },
 
 
- onSubmit: function(){
+ onSubmit: function() {
 
     var monsterSearch = new MonsterSearch();
 
-    monsterSearch.name = this.getName();
-    monsterSearch.cr = this.getCr();
-    monsterSearch.crComparison = this.getCrComparison();
-    monsterSearch.type = this.getMonsterTypes();
+    var name_val = this.getName();
+    var cr_val = this.getCr();
+    var crComparison_val = this.getCrComparison();
+    var type_val = this.getMonsterTypes();
 
-    $.post("http://localhost:8080/monsters",monsterSearch,function(data, status, jqXHR) {
+    var toSend = {name:name_val,cr:cr_val,crComparison:crComparison_val,type:type_val};
+    console.log(toSend);
+    console.log('is PlainObject: ' + $.isPlainObject(toSend));
 
-        alert(data);
-
+    $.post("http://localhost:8080/monsters",toSend,function(data, status, jqXHR) {
+        console.log(data);
     });
-
  }
 
 }
 
 function MonsterSearch() {
-this.name="";
-this.cr=0;
-this.crComparison="";
-this.type=[];
+    this.name="";
+    this.cr=0;
+    this.crComparison="";
+    this.type=[];
 }
