@@ -9,6 +9,8 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public class MonsterServiceImpl implements MonsterService {
 
@@ -23,7 +25,7 @@ public class MonsterServiceImpl implements MonsterService {
         this.predicateBuilder = predicateBuilder;
     }
 
-    public Iterable<Monster> findByCriteria(String name, MonsterType type[], Float cr, String crComparison, Integer xpValue, String pageNumber) {
+    public Iterable<Monster> findByCriteria(String name, List<MonsterType> type, Float cr, String crComparison, Integer xpValue, String pageNumber) {
 
         if(cr < 0) {
             cr = null;

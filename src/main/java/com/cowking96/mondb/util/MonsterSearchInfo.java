@@ -3,7 +3,9 @@ package com.cowking96.mondb.util;
 import com.cowking96.mondb.model.MonsterType;
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 
 public class MonsterSearchInfo {
 
@@ -11,7 +13,7 @@ public class MonsterSearchInfo {
     private Float cr;
     private Integer xpValue;
     private String pageNumber;
-    private String[] type;
+    private String type;
     private String crComparison;
 
     public MonsterSearchInfo() {
@@ -23,11 +25,11 @@ public class MonsterSearchInfo {
         type = null;
     }
 
-    public String[] getType() {
+    public String getType() {
         return type;
     }
 
-    public void setType(String[] type) {
+    public void setType(String type) {
         this.type = type;
     }
 
@@ -71,20 +73,28 @@ public class MonsterSearchInfo {
         return pageNumber;
     }
 
-    public MonsterType[] stringToMonsterType(){
-        return new MonsterType[] {MonsterType.BEAST};
-    }
 
-    @Override
-    public String toString() {
-        return "MonsterSearchInfo{" +
-                "name='" + name + '\'' +
-                ", cr=" + cr +
-                ", xpValue=" + xpValue +
-                ", pageNumber='" + pageNumber + '\'' +
-                ", type=" + Arrays.toString(type) +
-                ", crComparison='" + crComparison + '\'' +
-                '}';
-    }
+//    @Override
+//    public String toString() {
+//        return "MonsterSearchInfo{" +
+//                "name='" + name + '\'' +
+//                ", cr=" + cr +
+//                ", xpValue=" + xpValue +
+//                ", pageNumber='" + pageNumber + '\'' +
+//                ", type=" + Arrays.toString(type) +
+//                ", crComparison='" + crComparison + '\'' +
+//                '}';
+//    }
 
+    public List <MonsterType> convertToArray(String type) {
+        if(type.trim() == ""){
+            return null;
+        }
+        String[] monsterTypesString = type.split("\\s+");
+       List<MonsterType> monsterTypes = new ArrayList();
+        for(String s:monsterTypesString){
+            monsterTypes.add(MonsterType.valueOf(s));
+        }
+        return monsterTypes;
+    }
 }

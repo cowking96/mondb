@@ -1,4 +1,4 @@
-Core = {
+SearchPage = {
 
     startup: function() {
 
@@ -9,6 +9,7 @@ Core = {
                 $( "#crcompareselect" ).selectmenu();
 //                $( "#monstername" ).autocomplete();
                 $( "#tabs" ).tabs();
+
 
                 //disable comparison selectors initially until assoc widget used
                 $( "#namecompareselect" ).selectmenu("disable");
@@ -54,7 +55,7 @@ Core = {
     bindMonsterSearchSubmit: function() {
 
         $("#searchSubmit").click(function() {
-            Core.onSubmit();
+            SearchPage.onSubmit();
         });
 
     },
@@ -105,13 +106,13 @@ Core = {
  },
 
  getMonsterTypes: function() {
-    var type = [];
+    var type = "";
     $('input,[type="checkbox"]').each(function () {
         if (this.checked) {
-            type.push(this.name.toUpperCase());
+            type = type + this.name.toUpperCase()+" ";
         }
 
-        if(type.length==0){
+        if(type.trim().length==0){
             return null;
         }
 
@@ -121,6 +122,7 @@ Core = {
 
 
  onSubmit: function() {
+    var table = $('#monstersearchresultsTableHolder').DataTable();
 
     var monsterSearch = new MonsterSearch();
 
@@ -132,11 +134,15 @@ Core = {
     var toSend = {name:name_val,cr:cr_val,crComparison:crComparison_val,type:type_val};
     console.log(toSend);
     console.log('is PlainObject: ' + $.isPlainObject(toSend));
-
-    $.post("http://localhost:8080/monsters",toSend,function(data, status, jqXHR) {
-        console.log(data);
+    $("#tabs").tabs({
+      active: 1
     });
- }
+    $.post("http://localhost:8080/monsters",toSend,function(data, status, jqXHR) {
+        table.destroy();
+        SearchResults.buildPage(data)
+        console.log("data passed")
+    });
+     }
 
 }
 
@@ -144,5 +150,5 @@ function MonsterSearch() {
     this.name="";
     this.cr=0;
     this.crComparison="";
-    this.type=[];
+    this.type="";
 }

@@ -5,6 +5,9 @@ import com.querydsl.core.types.Predicate;
 import org.junit.Ignore;
 import org.junit.Test;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import static com.google.common.truth.Truth.assertThat;
 
 public class MonsterPredicateBuilderTest {
@@ -32,7 +35,8 @@ public class MonsterPredicateBuilderTest {
 
         MonsterPredicateBuilder monsterPredicateBuilder = new MonsterPredicateBuilder();
 
-        MonsterType[] types = {MonsterType.BEAST};
+        List<MonsterType> types = new ArrayList<>();
+        types.add(MonsterType.BEAST);
         Predicate predicate = monsterPredicateBuilder.buildPredicate(null,types,null,null,null,null);
         assertThat(predicate.toString()).isEqualTo("monster.type = BEAST");
     }
@@ -148,7 +152,9 @@ public class MonsterPredicateBuilderTest {
     @Test
     public void should_build_multitype_predicate() {
 
-        MonsterType[] types = {MonsterType.BEAST,MonsterType.CELESTIAL};
+        List<MonsterType> types = new ArrayList<>();
+        types.add(MonsterType.BEAST);
+        types.add(MonsterType.CELESTIAL);
 
         MonsterPredicateBuilder monsterPredicateBuilder = new MonsterPredicateBuilder();
 

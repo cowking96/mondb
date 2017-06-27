@@ -6,6 +6,9 @@ import com.querydsl.core.types.Predicate;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
+
+import java.util.List;
+
 import static com.cowking96.mondb.dao.QMonster.monster;
 
 @Service
@@ -13,7 +16,7 @@ public class MonsterPredicateBuilder {
 
     private static final Logger LOG = LoggerFactory.getLogger(MonsterPredicateBuilder.class);
 
-    public Predicate buildPredicate(String name, MonsterType[] types, Float cr, String crComparison, Integer xpValue, String pageNumber){
+    public Predicate buildPredicate(String name, List<MonsterType> types, Float cr, String crComparison, Integer xpValue, String pageNumber){
 
         if(crComparison == null){
             crComparison = "=";
@@ -40,8 +43,8 @@ public class MonsterPredicateBuilder {
         }
 
         if(types != null){
-            if(types.length == 1) {
-                builder = builder.and((monster.type.eq(types[0])));
+            if(types.size() == 1) {
+                builder = builder.and((monster.type.eq(types.get(0))));
             } else {
 
                 BooleanBuilder orBuilder = new BooleanBuilder();

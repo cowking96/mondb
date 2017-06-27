@@ -34,7 +34,7 @@ public class MonsterSearchController {
             LOG.debug("The post function has been called with search info: {}", monsterSearchInfo.toString());
 
             Iterable<Monster> monsters = monsterService.findByCriteria(monsterSearchInfo.getName(),
-                    monsterSearchInfo.stringToMonsterType(),monsterSearchInfo.getCr(),
+                    monsterSearchInfo.convertToArray(monsterSearchInfo.getType()),monsterSearchInfo.getCr(),
                     monsterSearchInfo.getCrComparison(),monsterSearchInfo.getXpValue(),monsterSearchInfo.getPageNumber());
 
             return new ResponseEntity<Iterable<Monster>>(monsters, HttpStatus.OK);
@@ -49,7 +49,7 @@ public class MonsterSearchController {
  @RequestMapping(path = "/monsters", method = RequestMethod.GET)
     public ResponseEntity<?> searchForMonsters (
          @RequestParam(required = false) String name,
-        @RequestParam(required = false) MonsterType[] type,
+        @RequestParam(required = false) List <MonsterType> type,
         @RequestParam(required = false) Float cr,
         @RequestParam(required = false) String crComparison,
         @RequestParam(required = false) Integer xpValue,
