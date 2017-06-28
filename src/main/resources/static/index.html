@@ -14,6 +14,7 @@
 
     <script src="js/monsterSearchPage.js"></script>
     <script src="js/monsterSearchResults.js"></script>
+    <script src ="js/monsterEncounterBuilder.js"></script>
 
     <link rel = "stylesheet" href = "datatables/datatables.min.css">
     <script src = "datatables/datatables.min.js"></script>
@@ -159,10 +160,77 @@
     <div id="tabs-encounterbuilder">
         <h3>encounter builder</h3>
         <p>encounter builder parameters</p>
+        Average Party Level<br/>
+        <select name="partyLevel" id="partyLevel">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+            <option value="11">11</option>
+            <option value="12">12</option>
+            <option value="13">13</option>
+            <option value="14">14</option>
+            <option value="15">15</option>
+            <option value="16">16</option>
+            <option value="17">17</option>
+            <option value="18">18</option>
+            <option value="19">19</option>
+            <option value="20">20</option>
+        </select>
+
+        <br/>
+
+        Monster Type<br/>
+        <fieldset id="checkboxfieldsetEncounter">
+            <div id="monsterTypesEncounter">
+                <label for="aberationEncounter-type">Aberation</label>
+                <input type="checkbox" name="Aberration" id="aberationEncounter-type"> <br/>
+                <label for="beastEncounter-type">Beast</label>
+                <input type="checkbox" name="Beast" id="beastEncounter-type"> <br/>
+                <label for="dragonEncounter-type">Dragon</label>
+                <input type="checkbox" name="Dragon" id="dragonEncounter-type"> <br/>
+                <label for="elementalEncounter-type">Elemental</label>
+                <input type="checkbox" name="Elemental" id="elementalEncounter-type"> <br/>
+                <label for="fiendEncounter-type">Fiend</label>
+                <input type="checkbox" name="Fiend" id="fiendEncounter-type"> <br/>
+                <label for="giantEncounter-type">Giant</label>
+                <input type="checkbox" name="Giant" id="giantEncounter-type"> <br/>
+                <label for="MonstrosityEncounter-type">Monstrosity</label>
+                <input type="checkbox" name="Monstrosity" id="MonstrosityEncounter-type"> <br/>
+                <label for="npcEncounter-type">NPC</label>
+                <input type="checkbox" name="NPC" id="npcEncounter-type"> <br/>
+                <label for="oozeEncounter-type">Ooze</label>
+                <input type="checkbox" name="Ooze" id="oozeEncounter-type"> <br/>
+                <label for="swarmEncounter-type">Swarm</label>
+                <input type="checkbox" name="Swarm" id="swarmEncounter-type"> <br/>
+                <label for="undeadEncounter-type">Undead</label>
+                <input type="checkbox" name="Undead" id="undeadEncounter-type"> <br/>
+            </div>
+        </fieldset>
+
+        Party Sizel<br/>
+        <select name="partySize" id="partySize">
+            <option value="3-5">3 to 5</option>
+            <option value="<3">Less than 3</option>
+            <option value=">5">More than 5</option>
+        </select>
+
+        <input type="button" id="encounterSubmit" value="Submit">
+
     </div>
 
     <div id="tabs-encounterbuilderresults">
         <h3>encounter results</h3>
+
+        <div id="encounterXpValuesTableHolder">
+        </div>
+
         <p>results of encounter builder.</p>
     </div>
 
@@ -170,7 +238,13 @@
 
 
 <script>
-$(document).ready(SearchPage.startup());
+
+$(document).ready( function() {
+    SearchPage.startup();
+    SearchResults.startup();
+    EncounterBuilderCore.startup();
+});
+
 </script>
 
 </body>

@@ -3,11 +3,11 @@ SearchPage = {
     startup: function() {
 
                 //init widgets
-                $( "#monsterTypes" ).controlgroup()
+                $( "#monsterTypes" ).controlgroup();
                 $( "#crselect" ).selectmenu();
                 $( "#namecompareselect" ).selectmenu();
                 $( "#crcompareselect" ).selectmenu();
-//                $( "#monstername" ).autocomplete();
+
                 $( "#tabs" ).tabs();
 
 
@@ -19,6 +19,7 @@ SearchPage = {
                 this.bindMonsterNameChange();
                 this.bindMonsterCrChange();
                 this.bindMonsterSearchSubmit();
+
 
     },
 
@@ -122,9 +123,6 @@ SearchPage = {
 
 
  onSubmit: function() {
-    var table = $('#monstersearchresultsTableHolder').DataTable();
-
-    var monsterSearch = new MonsterSearch();
 
     var name_val = this.getName();
     var cr_val = this.getCr();
@@ -138,17 +136,9 @@ SearchPage = {
       active: 1
     });
     $.post("http://localhost:8080/monsters",toSend,function(data, status, jqXHR) {
-        table.destroy();
-        SearchResults.buildPage(data)
-        console.log("data passed")
+        SearchResults.buildPage(data);
+        console.log("search results data passed");
     });
-     }
+ }
 
-}
-
-function MonsterSearch() {
-    this.name="";
-    this.cr=0;
-    this.crComparison="";
-    this.type="";
 }

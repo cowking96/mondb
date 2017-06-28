@@ -1,23 +1,26 @@
 SearchResults = {
 
-buildPage: function(data){
+    table: {},
 
+    startup: function() {
 
-console.log(JSON.stringify(data));
-var testData = [{name: 'name1', value: 'value1'},{name: 'name2', value: 'value2'}];
+        this.table = $('#monstersearchresultsTableHolder').DataTable( {
 
-$('#monstersearchresultsTableHolder').DataTable( {
+            columns: [
+                { data: 'name' },
+                { data: 'cr'},
+                { data: 'xpValue'},
+                { data: 'pageNumber'},
+                { data: 'type'}
+            ]
+        } );
+    },
 
-    data: data,
-    columns: [
-        { data: 'name' },
-        { data: 'cr'},
-        { data: 'xpValue'},
-        { data: 'pageNumber'},
-        { data: 'type'},
+    buildPage: function(data) {
 
-    ]
-} );
+        console.log(JSON.stringify(data));
 
-}
+        this.table.clear().rows.add(data).draw();
+
+    }
 }
