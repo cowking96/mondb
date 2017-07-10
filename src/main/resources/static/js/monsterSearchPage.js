@@ -4,16 +4,17 @@ SearchPage = {
 
                 //init widgets
                 $( "#monsterTypes" ).controlgroup();
-                $( "#crselect" ).selectmenu();
+                $( "#minCrSelect" ).selectmenu();
+                $( "#maxCrSelect" ).selectmenu();
                 $( "#namecompareselect" ).selectmenu();
-                $( "#crcompareselect" ).selectmenu();
+
 
                 $( "#tabs" ).tabs();
 
 
                 //disable comparison selectors initially until assoc widget used
                 $( "#namecompareselect" ).selectmenu("disable");
-                $( "#crcompareselect" ).selectmenu("disable");
+
 
                 //bind callbacks on control change
                 this.bindMonsterNameChange();
@@ -90,21 +91,22 @@ SearchPage = {
     return name;
  },
 
- getCr: function() {
-    var monsterCr = $('#crselect').val();
-    if(monsterCr == 'any'){
-        monsterCr = -1;
+ getMinCr: function() {
+    var minMonsterCr = $('#minCrSelect').val();
+    if(minMonsterCr == 'any'){
+        minMonsterCr = null;
     }
-    return monsterCr;
+    return minMonsterCr;
  },
 
- getCrComparison: function() {
-  var monsterCrCompare = $('#crcompareselect').val();
-  if($('#crselect').val()=="any"){
-  monsterCrCompare = null;
-  }
-  return monsterCrCompare;
- },
+ getMaxCr: function() {
+     var maxMonsterCr = $('#maxCrSelect').val();
+     if(maxMonsterCr == 'any'){
+         maxMonsterCr = null;
+     }
+     return maxMonsterCr;
+  },
+
 
  getMonsterTypes: function() {
     var type = "";
@@ -125,11 +127,13 @@ SearchPage = {
  onSubmit: function() {
 
     var name_val = this.getName();
-    var cr_val = this.getCr();
-    var crComparison_val = this.getCrComparison();
+    var minCr_val = this.getMinCr();
+    var maxCr_val = this.getMaxCr();
     var type_val = this.getMonsterTypes();
 
-    var toSend = {name:name_val,cr:cr_val,crComparison:crComparison_val,type:type_val};
+    console.log('this host is: ' + window.location.href);
+
+    var toSend = {name:name_val,minCr:minCr_val,maxCr:maxCr_val,type:type_val};
     console.log(toSend);
     console.log('is PlainObject: ' + $.isPlainObject(toSend));
     $("#tabs").tabs({

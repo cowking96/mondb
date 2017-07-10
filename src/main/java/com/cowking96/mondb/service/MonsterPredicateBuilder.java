@@ -16,11 +16,7 @@ public class MonsterPredicateBuilder {
 
     private static final Logger LOG = LoggerFactory.getLogger(MonsterPredicateBuilder.class);
 
-    public Predicate buildPredicate(String name, List<MonsterType> types, Float cr, String crComparison, Integer xpValue, String pageNumber){
-
-        if(crComparison == null){
-            crComparison = "=";
-        }
+    public Predicate buildPredicate(String name, List<MonsterType> types, Float minCr, Float maxCr, Integer minXpValue, Integer maxXpValue){
 
         BooleanBuilder builder = new BooleanBuilder();
 
@@ -30,16 +26,20 @@ public class MonsterPredicateBuilder {
             }
         }
 
-        if(cr != null) {
-            builder = crParameter(builder, cr, crComparison);
+        if(minCr != null){
+            builder = builder.and(monster.cr.goe(minCr));
         }
 
-        if(xpValue != null) {
-            builder = builder.and(monster.xpValue.eq(xpValue));
+        if(maxCr != null){
+            builder = builder.and(monster.cr.loe(maxCr));
         }
 
-        if(pageNumber != null) {
-            builder = builder.and(monster.pageNumber.equalsIgnoreCase(pageNumber));
+        if(minXpValue != null){
+            builder = builder.and(monster.xpValue.goe(minXpValue));
+        }
+
+        if(maxXpValue != null){
+            builder = builder.and(monster.xpValue.loe(maxXpValue));
         }
 
         if(types != null){
@@ -58,26 +58,6 @@ public class MonsterPredicateBuilder {
         }
 
         return builder.getValue();
-    }
-
-    private BooleanBuilder crParameter(BooleanBuilder builder,Float cr,String crComparison){
-
-        if(crComparison.equals(">=")){
-            return builder = builder.and(monster.cr.goe(cr));
-        }
-
-        if (crComparison .equals("<=")){
-            return builder = builder.and(monster.cr.loe(cr));
-        }
-
-        if(crComparison.equals("=")){
-            return builder = builder.and(monster.cr.eq(cr));
-        }
-
-        else {
-            LOG.warn("Ignoring invalid cr comparison string: {}", crComparison);
-            return builder = builder.and(monster.cr.eq(cr));
-        }
     }
 
     private BooleanBuilder nameParameter(BooleanBuilder builder,String name){

@@ -15,9 +15,10 @@
     <script src="js/monsterSearchPage.js"></script>
     <script src="js/monsterSearchResults.js"></script>
     <script src ="js/monsterEncounterBuilder.js"></script>
+    <script src = "js/monsterEncounterResults.js"></script>
 
-    <link rel = "stylesheet" href = "datatables/datatables.min.css">
-    <script src = "datatables/datatables.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="datatables/datatables.min.css">
+    <script type="text/javascript" src="datatables/datatables.min.js"></script>
 
 
 
@@ -56,8 +57,8 @@
 
             <br/>
 
-            Monster CR:<br/>
-            <select name="Cr" id="crselect">
+             Minimum Monster CR:<br/>
+            <select name="minCr" id="minCrSelect">
                 <option value="any">Any</option>
                 <option value=".125">1/8(25XP)</option>
                 <option value=".25">1/4(50XP) </option>
@@ -96,10 +97,42 @@
 
 
 
-            <select name="cr comparison" id="crcompareselect">
-                <option value="=">equal to</option>
-                <option value=">=">greater than or equal to</option>
-                <option value="<=">less than or equal to</option>
+            Maximum Monster CR:<br/>
+            <select name="maxCr" id="maxCrSelect">
+                <option value="any">Any</option>
+                <option value=".125">1/8(25XP)</option>
+                <option value=".25">1/4(50XP) </option>
+                <option value=".5">1/2(100XP)</option>
+                <option value="1">1(200XP)</option>
+                <option value="2">2(450XP)</option>
+                <option value="3">3(700XP)</option>
+                <option value="4">4(1,100XP)</option>
+                <option value="5">5(1,800)XP</option>
+                <option value="6">6(2,300XP)</option>
+                <option value="7">7(2,900XP)</option>
+                <option value="8">8(3,900XP)</option>
+                <option value="9">9(5,000XP)</option>
+                <option value="10">10(5,900XP)</option>
+                <option value="11">11(7,200XP)</option>
+                <option value="12">12(8,400XP)</option>
+                <option value="13">13(10,000XP)</option>
+                <option value="14">14(11,500XP)</option>
+                <option value="15">15(13,000XP)</option>
+                <option value="16">16(15,000XP)</option>
+                <option value="17">17(18,000XP)</option>
+                <option value="18">18(20,000XP)</option>
+                <option value="19">19(22,000XP)</option>
+                <option value="20">20(25,000XP)</option>
+                <option value="21">21(33,000XP)</option>
+                <option value="22">22(41,000XP)</option>
+                <option value="23">23(50,000XP)</option>
+                <option value="24">24(62,000XP)</option>
+                <option value="25">25(75,000XP)</option>
+                <option value="26">26(90,000XP)</option>
+                <option value="27">27(105,000XP)</option>
+                <option value="28">28(120,000XP)</option>
+                <option value="29">29(135,000XP)</option>
+                <option value="30">30(155,000XP)</option>
             </select>
 
             </br>
@@ -115,6 +148,8 @@
                     <input type="checkbox" name="Dragon" id="dragon-type"> <br/>
                     <label for="elemental-type">Elemental</label>
                     <input type="checkbox" name="Elemental" id="elemental-type"> <br/>
+                    <label for="fey-type">Fey</label>
+                    <input type="checkbox" name="Fey" id="fey-type"> <br/>
                     <label for="fiend-type">Fiend</label>
                     <input type="checkbox" name="Fiend" id="fiend-type"> <br/>
                     <label for="giant-type">Giant</label>
@@ -138,13 +173,9 @@
 
 
 
-
-
-
-
     <div id="tabs-monstersearchresults">
         <h3>results</h3>
-       <table id="monstersearchresultsTableHolder">
+       <table id="monstersearchresultsTableHolder" class="monsterList">
         <thead>
            <tr>
             <th>Name</th>
@@ -157,85 +188,100 @@
        </table>
     </div>
 
+
+
     <div id="tabs-encounterbuilder">
         <h3>encounter builder</h3>
         <p>encounter builder parameters</p>
-        Average Party Level<br/>
-        <select name="partyLevel" id="partyLevel">
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5</option>
-            <option value="6">6</option>
-            <option value="7">7</option>
-            <option value="8">8</option>
-            <option value="9">9</option>
-            <option value="10">10</option>
-            <option value="11">11</option>
-            <option value="12">12</option>
-            <option value="13">13</option>
-            <option value="14">14</option>
-            <option value="15">15</option>
-            <option value="16">16</option>
-            <option value="17">17</option>
-            <option value="18">18</option>
-            <option value="19">19</option>
-            <option value="20">20</option>
-        </select>
 
-        <br/>
+        <form>
+            Average Party Level<br/>
+            <select name="partyLevel" id="partyLevel">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+                <option value="11">11</option>
+                <option value="12">12</option>
+                <option value="13">13</option>
+                <option value="14">14</option>
+                <option value="15">15</option>
+                <option value="16">16</option>
+                <option value="17">17</option>
+                <option value="18">18</option>
+                <option value="19">19</option>
+                <option value="20">20</option>
+            </select>
 
-        Monster Type<br/>
-        <fieldset id="checkboxfieldsetEncounter">
-            <div id="monsterTypesEncounter">
-                <label for="aberationEncounter-type">Aberation</label>
-                <input type="checkbox" name="Aberration" id="aberationEncounter-type"> <br/>
-                <label for="beastEncounter-type">Beast</label>
-                <input type="checkbox" name="Beast" id="beastEncounter-type"> <br/>
-                <label for="dragonEncounter-type">Dragon</label>
-                <input type="checkbox" name="Dragon" id="dragonEncounter-type"> <br/>
-                <label for="elementalEncounter-type">Elemental</label>
-                <input type="checkbox" name="Elemental" id="elementalEncounter-type"> <br/>
-                <label for="fiendEncounter-type">Fiend</label>
-                <input type="checkbox" name="Fiend" id="fiendEncounter-type"> <br/>
-                <label for="giantEncounter-type">Giant</label>
-                <input type="checkbox" name="Giant" id="giantEncounter-type"> <br/>
-                <label for="MonstrosityEncounter-type">Monstrosity</label>
-                <input type="checkbox" name="Monstrosity" id="MonstrosityEncounter-type"> <br/>
-                <label for="npcEncounter-type">NPC</label>
-                <input type="checkbox" name="NPC" id="npcEncounter-type"> <br/>
-                <label for="oozeEncounter-type">Ooze</label>
-                <input type="checkbox" name="Ooze" id="oozeEncounter-type"> <br/>
-                <label for="swarmEncounter-type">Swarm</label>
-                <input type="checkbox" name="Swarm" id="swarmEncounter-type"> <br/>
-                <label for="undeadEncounter-type">Undead</label>
-                <input type="checkbox" name="Undead" id="undeadEncounter-type"> <br/>
-            </div>
-        </fieldset>
+            <br/>
 
-        Party Sizel<br/>
-        <select name="partySize" id="partySize">
-            <option value="3-5">3 to 5</option>
-            <option value="<3">Less than 3</option>
-            <option value=">5">More than 5</option>
-        </select>
+            Monster Type<br/>
+            <fieldset id="checkboxfieldsetEncounter">
+                <div id="monsterTypesEncounter">
+                    <label for="aberationEncounter-type">Aberation</label>
+                    <input type="checkbox" name="Aberration" id="aberationEncounter-type"> <br/>
+                    <label for="beastEncounter-type">Beast</label>
+                    <input type="checkbox" name="Beast" id="beastEncounter-type"> <br/>
+                    <label for="dragonEncounter-type">Dragon</label>
+                    <input type="checkbox" name="Dragon" id="dragonEncounter-type"> <br/>
+                    <label for="elementalEncounter-type">Elemental</label>
+                    <input type="checkbox" name="Elemental" id="elementalEncounter-type"> <br/>
+                    <label for="feyEncounter-type">Fey</label>
+                    <input type="checkbox" name="Fey" id="feyEncounter-type"> <br/>
+                    <label for="fiendEncounter-type">Fiend</label>
+                    <input type="checkbox" name="Fiend" id="fiendEncounter-type"> <br/>
+                    <label for="giantEncounter-type">Giant</label>
+                    <input type="checkbox" name="Giant" id="giantEncounter-type"> <br/>
+                    <label for="MonstrosityEncounter-type">Monstrosity</label>
+                    <input type="checkbox" name="Monstrosity" id="MonstrosityEncounter-type"> <br/>
+                    <label for="npcEncounter-type">NPC</label>
+                    <input type="checkbox" name="NPC" id="npcEncounter-type"> <br/>
+                    <label for="oozeEncounter-type">Ooze</label>
+                    <input type="checkbox" name="Ooze" id="oozeEncounter-type"> <br/>
+                    <label for="swarmEncounter-type">Swarm</label>
+                    <input type="checkbox" name="Swarm" id="swarmEncounter-type"> <br/>
+                    <label for="undeadEncounter-type">Undead</label>
+                    <input type="checkbox" name="Undead" id="undeadEncounter-type"> <br/>
+                </div>
+            </fieldset>
 
-        <input type="button" id="encounterSubmit" value="Submit">
+            Party Size<br/>
+            <select name="partySize" id="partySize">
+                <option value="5">3 to 5</option>
+                <option value="2">Less than 3</option>
+                <option value="6">More than 5</option>
+            </select>
 
+            <input type="button" id="encounterSubmit" value="Submit">
+
+        </form>
     </div>
+
+
 
     <div id="tabs-encounterbuilderresults">
-        <h3>encounter results</h3>
-
-        <div id="encounterXpValuesTableHolder">
-        </div>
-
-        <p>results of encounter builder.</p>
+        <h3>results</h3>
+        <table id="encounterSearchResultsMonsterTableHolder" class="monsterList">
+            <thead>
+            <tr>
+                <th>Name</th>
+                <th>CR</th>
+                <th>XpValue</th>
+                <th>Page Number</th>
+                <th>Type</th>
+            </tr>
+            </thead>
+        </table>
     </div>
 
-</div>
 
+</div>
 
 <script>
 
@@ -243,6 +289,7 @@ $(document).ready( function() {
     SearchPage.startup();
     SearchResults.startup();
     EncounterBuilderCore.startup();
+    EncounterSearchResults.startup();
 });
 
 </script>

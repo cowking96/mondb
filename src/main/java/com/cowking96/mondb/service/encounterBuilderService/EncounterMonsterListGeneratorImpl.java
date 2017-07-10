@@ -1,9 +1,10 @@
-package com.cowking96.mondb.service;
+package com.cowking96.mondb.service.encounterBuilderService;
 
 import com.cowking96.mondb.dao.MonsterRepository;
 import com.cowking96.mondb.model.Monster;
 import com.cowking96.mondb.model.MonsterType;
-import com.cowking96.mondb.util.MonsterSearchInfo;
+import com.cowking96.mondb.service.MonsterPredicateBuilder;
+import com.cowking96.mondb.util.DatabaseCreator;
 import com.querydsl.core.types.Predicate;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -15,31 +16,21 @@ import java.util.List;
 
 @Service
 @Component
-public class MonsterServiceImpl implements MonsterService {
+public class EncounterMonsterListGeneratorImpl implements  EncounterMonsterListGenerator {
 
-    private static final Logger LOG = LoggerFactory.getLogger(MonsterServiceImpl.class);
-
+    private static final Logger LOG = LoggerFactory.getLogger(EncounterMonsterListGeneratorImpl.class);
     private MonsterRepository monsterRepository;
     private MonsterPredicateBuilder predicateBuilder;
 
     @Autowired
-    public MonsterServiceImpl(MonsterRepository monsterRepository, MonsterPredicateBuilder predicateBuilder ) {
+    public EncounterMonsterListGeneratorImpl(MonsterRepository monsterRepository, MonsterPredicateBuilder predicateBuilder ) {
         this.monsterRepository = monsterRepository;
         this.predicateBuilder = predicateBuilder;
     }
 
-    @Override
-    public Iterable<Monster> findMonsters(MonsterSearchInfo monsterSearchInfo) {
-        return find(monsterSearchInfo.getName(),
-                monsterSearchInfo.convertTypeToEnum(),
-                monsterSearchInfo.getMinCr(),
-                monsterSearchInfo.getMaxCr());
-    }
+    public Iterable<Monster>  generateEncounterList(List<MonsterType> types, int minXp, int maxXp){
 
-    private Iterable<Monster> find(String name, List<MonsterType> type, Float minCr,Float maxCr) {
-        
-
-        Predicate predicate = predicateBuilder.buildPredicate(name, type, minCr, maxCr, null, null);
+        Predicate predicate = predicateBuilder.buildPredicate(null, types, null, null, minXp, maxXp);
 
         if(predicate == null){
             LOG.debug("Our Predicate is: null. Searching for all monsters");
@@ -50,10 +41,4 @@ public class MonsterServiceImpl implements MonsterService {
 
         return monsterRepository.findAll(predicate);
     }
-
 }
-
-
-
-
-

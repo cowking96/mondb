@@ -1,7 +1,10 @@
 package com.cowking96.mondb.util;
 
+import com.cowking96.mondb.controller.MonsterSearchController;
 import com.cowking96.mondb.model.MonsterType;
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -9,19 +12,17 @@ import java.util.List;
 
 public class MonsterSearchInfo {
 
+    private static final Logger LOG = LoggerFactory.getLogger(MonsterSearchInfo.class);
+
     private String name;
-    private Float cr;
-    private Integer xpValue;
-    private String pageNumber;
+    private Float minCr;
+    private Float maxCr;
     private String type;
-    private String crComparison;
 
     public MonsterSearchInfo() {
         name = null;
-        cr = null;
-        xpValue = null;
-        pageNumber = null;
-        crComparison = null;
+        minCr = null;
+        maxCr = null;
         type = null;
     }
 
@@ -33,60 +34,31 @@ public class MonsterSearchInfo {
         this.type = type;
     }
 
-    public String getCrComparison() {
-        return crComparison;
-    }
-
-    public void setCrComparison(String crComparison) {
-        this.crComparison = crComparison;
-    }
-
     public void setName(String name) {
         this.name = name;
     }
 
-    public void setCr(Float cr) {
-        this.cr = cr;
+    public void setMinCr(Float minCr) {
+        this.minCr = minCr;
     }
 
-    public void setXpValue(Integer xpValue) {
-        this.xpValue = xpValue;
-    }
-
-    public void setPageNumber(String pageNumber) {
-        this.pageNumber = pageNumber;
+    public void setMaxCr(Float maxCr) {
+        this.maxCr = maxCr;
     }
 
     public String getName() {
         return name;
     }
 
-    public Float getCr() {
-        return cr;
+    public Float getMinCr() {
+        return minCr;
     }
 
-    public Integer getXpValue() {
-        return xpValue;
+    public Float getMaxCr() {
+        return maxCr;
     }
 
-    public String getPageNumber() {
-        return pageNumber;
-    }
-
-
-//    @Override
-//    public String toString() {
-//        return "MonsterSearchInfo{" +
-//                "name='" + name + '\'' +
-//                ", cr=" + cr +
-//                ", xpValue=" + xpValue +
-//                ", pageNumber='" + pageNumber + '\'' +
-//                ", type=" + Arrays.toString(type) +
-//                ", crComparison='" + crComparison + '\'' +
-//                '}';
-//    }
-
-    public List <MonsterType> convertToArray(String type) {
+    public List <MonsterType> convertTypeToEnum() {
         if(type.trim() == ""){
             return null;
         }
@@ -96,5 +68,15 @@ public class MonsterSearchInfo {
             monsterTypes.add(MonsterType.valueOf(s));
         }
         return monsterTypes;
+    }
+
+    @Override
+    public String toString() {
+        return "MonsterSearchInfo{" +
+                "name='" + name + '\'' +
+                ", minCr=" + minCr +
+                ", maxCr=" + maxCr +
+                ", type='" + type + '\'' +
+                '}';
     }
 }

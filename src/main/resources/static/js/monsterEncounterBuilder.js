@@ -52,5 +52,14 @@ EncounterBuilderCore = {
         var toSendEncounter = {type:type_val,partySize:partySize,partyLevel:partyLevel};
         
         console.log(JSON.stringify(toSendEncounter));
+        $("#tabs").tabs({
+              active: 3
+              })
+        $.post("http://localhost:8080/monsters/encounterBuilder",toSendEncounter,function(data, status, jqXHR) {
+            EncounterSearchResults.buildPage(data);
+            console.log("data from encounter builder has been passed");
+        })
+
     }
 }
+

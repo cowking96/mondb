@@ -1,10 +1,11 @@
-SearchResults = {
+EncounterSearchResults = {
 
     table: {},
 
     startup: function() {
 
-        this.table = $('#monstersearchresultsTableHolder').DataTable( {
+
+        this.table = $('#encounterSearchResultsMonsterTableHolder').DataTable( {
             columns: [
                 { data: 'name' },
                 { data: 'cr'},
@@ -19,7 +20,9 @@ SearchResults = {
 
         console.log(JSON.stringify(data));
 
-        this.table.clear().rows.add(data).draw();
+        var monsterList = data.encounterMonsterList
+
+        this.table.clear().rows.add(monsterList).draw();
 
     }
 }

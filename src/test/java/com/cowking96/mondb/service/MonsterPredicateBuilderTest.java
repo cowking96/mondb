@@ -42,75 +42,58 @@ public class MonsterPredicateBuilderTest {
     }
 
     @Test
-    public void should_build_predicate_for_given_cr() {
+    public void should_build_predicate_for_given_minCr() {
 
         MonsterPredicateBuilder monsterPredicateBuilder = new MonsterPredicateBuilder();
 
         Predicate predicate = monsterPredicateBuilder.buildPredicate(null,null,1.0f,null,null,null);
-        assertThat(predicate.toString()).isEqualTo("monster.cr = 1.0");
-    }
-
-    @Test
-    public void should_build_predicate_for_given_cr_and_ltCrComparison() {
-
-        MonsterPredicateBuilder monsterPredicateBuilder = new MonsterPredicateBuilder();
-
-        Predicate predicate = monsterPredicateBuilder.buildPredicate(null,null,1.0f,"<=",null,null);
-        assertThat(predicate.toString()).isEqualTo("monster.cr <= 1.0");
-    }
-
-    @Test
-    public void should_build_predicate_for_given_cr_and_gtCrComparison() {
-
-        MonsterPredicateBuilder monsterPredicateBuilder = new MonsterPredicateBuilder();
-
-        Predicate predicate = monsterPredicateBuilder.buildPredicate(null,null,1.0f,">=",null,null);
         assertThat(predicate.toString()).isEqualTo("monster.cr >= 1.0");
     }
 
     @Test
-    public void should_build_predicate_for_given_cr_and_eqCrComparison() {
+    public void should_build_predicate_for_given_maxCr() {
 
         MonsterPredicateBuilder monsterPredicateBuilder = new MonsterPredicateBuilder();
 
-        Predicate predicate = monsterPredicateBuilder.buildPredicate(null,null,1.0f,"=",null,null);
-        assertThat(predicate.toString()).isEqualTo("monster.cr = 1.0");
+        Predicate predicate = monsterPredicateBuilder.buildPredicate(null,null,null,10.0f,null,null);
+        assertThat(predicate.toString()).isEqualTo("monster.cr <= 10.0");
     }
 
     @Test
-    public void should_build_predicate_for_given_cr_and_invalidCrComparison() {
+    public void should_build_predicate_for_given_minCr_and_maxCr() {
 
         MonsterPredicateBuilder monsterPredicateBuilder = new MonsterPredicateBuilder();
 
-        Predicate predicate = monsterPredicateBuilder.buildPredicate(null,null,1.0f,"?",null,null);
-        assertThat(predicate.toString()).isEqualTo("monster.cr = 1.0");
+        Predicate predicate = monsterPredicateBuilder.buildPredicate(null,null,1.0f,10.0f,null,null);
+        assertThat(predicate.toString()).isEqualTo("monster.cr >= 1.0 && monster.cr <= 10.0");
     }
 
+
     @Test
-    public void should_build_predicate_for_given_xpValue() {
+    public void should_build_predicate_for_given_min_XpValue() {
 
         MonsterPredicateBuilder monsterPredicateBuilder = new MonsterPredicateBuilder();
 
         Predicate predicate = monsterPredicateBuilder.buildPredicate(null,null,null,null,100,null);
-        assertThat(predicate.toString()).isEqualTo("monster.xpValue = 100");
+        assertThat(predicate.toString()).isEqualTo("monster.xpValue >= 100");
     }
 
     @Test
-    public void should_build_predicate_for_given_pageNumber() {
+    public void should_build_predicate_for_given_max_XpValue() {
 
         MonsterPredicateBuilder monsterPredicateBuilder = new MonsterPredicateBuilder();
 
-        Predicate predicate = monsterPredicateBuilder.buildPredicate(null,null,null,null,null,"MM100");
-        assertThat(predicate.toString()).isEqualTo("eqIc(monster.pageNumber,MM100)");
+        Predicate predicate = monsterPredicateBuilder.buildPredicate(null,null,null,null,null,100);
+        assertThat(predicate.toString()).isEqualTo("monster.xpValue <= 100");
     }
 
     @Test
-    public void should_build_predicate_for_given_cr_and_name() {
+    public void should_build_predicate_for_given_min_and_max_XpValue() {
 
         MonsterPredicateBuilder monsterPredicateBuilder = new MonsterPredicateBuilder();
 
-        Predicate predicate = monsterPredicateBuilder.buildPredicate("Orc",null,1.0f,">=",null,null);
-        assertThat(predicate.toString()).isEqualTo("eqIc(monster.name,Orc) && monster.cr >= 1.0");
+        Predicate predicate = monsterPredicateBuilder.buildPredicate(null,null,null,null,10,100);
+        assertThat(predicate.toString()).isEqualTo("monster.xpValue >= 10 && monster.xpValue <= 100");
     }
 
     @Test
