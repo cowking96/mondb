@@ -24,6 +24,9 @@ import java.util.List;
 @RestController
 public class MonsterSearchController {
 
+    private static final String MONSTER_SEARCH_URL = "/monsters";
+    private static final String ENCOUNTER_BUILDER_URL = "/monsters/encounterBuilder";
+
     private static final Logger LOG = LoggerFactory.getLogger(MonsterSearchController.class);
 
     @Autowired
@@ -48,7 +51,7 @@ public class MonsterSearchController {
     }
 
 
-    @RequestMapping(value = "/monsters",method = RequestMethod.POST)
+    @RequestMapping(value = MONSTER_SEARCH_URL,method = RequestMethod.POST)
     public ResponseEntity<?> searchForMonsters(MonsterSearchInfo monsterSearchInfo,XpTableBuilderImpl xpTableBuilder,EncounterBuilderResult encounterBuilderResult) {
 
         try {
@@ -67,7 +70,7 @@ public class MonsterSearchController {
 
     }
 
-    @RequestMapping(value = "/monsters/encounterBuilder",method = RequestMethod.POST)
+    @RequestMapping(value = ENCOUNTER_BUILDER_URL,method = RequestMethod.POST)
     public ResponseEntity<?> buildEncounter (EncounterBuilderInfo encounterBuilderInfo) {
 
         try {

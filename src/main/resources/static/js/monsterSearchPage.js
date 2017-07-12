@@ -1,25 +1,31 @@
+
+
 SearchPage = {
 
-    startup: function() {
+    baseUrl: "",
 
-                //init widgets
-                $( "#monsterTypes" ).controlgroup();
-                $( "#minCrSelect" ).selectmenu();
-                $( "#maxCrSelect" ).selectmenu();
-                $( "#namecompareselect" ).selectmenu();
+    startup: function(generatedURL) {
 
+       this.baseUrl = generatedURL;
 
-                $( "#tabs" ).tabs();
-
-
-                //disable comparison selectors initially until assoc widget used
-                $( "#namecompareselect" ).selectmenu("disable");
+        //init widgets
+        $( "#monsterTypes" ).controlgroup();
+        $( "#minCrSelect" ).selectmenu();
+        $( "#maxCrSelect" ).selectmenu();
+        $( "#namecompareselect" ).selectmenu();
 
 
-                //bind callbacks on control change
-                this.bindMonsterNameChange();
-                this.bindMonsterCrChange();
-                this.bindMonsterSearchSubmit();
+        $( "#tabs" ).tabs();
+
+
+        //disable comparison selectors initially until assoc widget used
+        $( "#namecompareselect" ).selectmenu("disable");
+
+
+        //bind callbacks on control change
+        this.bindMonsterNameChange();
+        this.bindMonsterCrChange();
+        this.bindMonsterSearchSubmit();
 
 
     },
@@ -139,7 +145,7 @@ SearchPage = {
     $("#tabs").tabs({
       active: 1
     });
-    $.post("http://localhost:8080/monsters",toSend,function(data, status, jqXHR) {
+    $.post(this.baseUrl + "/monsters",toSend,function(data, status, jqXHR) {
         SearchResults.buildPage(data);
         console.log("search results data passed");
     });

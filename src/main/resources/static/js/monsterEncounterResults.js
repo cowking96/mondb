@@ -124,6 +124,5 @@ EncounterSearchResults = {
 
    }
 
-//   this.xpTableFinal.clear().rows.add(xpList).draw();
 }
 }

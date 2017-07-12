@@ -1,13 +1,18 @@
+
+
 EncounterBuilderCore = {
 
-    startup: function() {
+    baseUrl: "",
+
+    startup: function(generatedURL) {
+
+        this.baseUrl = generatedURL;
 
         $( "#monsterTypesEncounter" ).controlgroup();
         $( "#partyLevel" ).selectmenu();
         $( "#partySize" ).selectmenu();
 
         this.bindEncounterSubmit();
-
     },
 
     getMonsterTypesEncounter: function() {
@@ -55,11 +60,13 @@ EncounterBuilderCore = {
         $("#tabs").tabs({
               active: 3
               })
-        $.post("http://localhost:8080/monsters/encounterBuilder",toSendEncounter,function(data, status, jqXHR) {
+        $.post(this.baseUrl + "/monsters/encounterBuilder",toSendEncounter,function(data, status, jqXHR) {
             EncounterSearchResults.buildPage(data);
             console.log("data from encounter builder has been passed");
         })
 
     }
+
+
 }
 

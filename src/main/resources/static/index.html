@@ -10,7 +10,6 @@
 
     <script src="js/jquery/external/jquery/jquery.js"></script>
     <script src="js/jquery/jquery-ui.min.js"></script>
-    <!--<script src="js/datatable/datatables.min.js"></script>-->
 
     <script src="js/monsterSearchPage.js"></script>
     <script src="js/monsterSearchResults.js"></script>
@@ -40,8 +39,8 @@
 
 
     <div id="tabs-monstersearch">
-        <h3>search parameters</h3>
-        <p>Enter search parameters here.</p>
+        <h3>Search Parameters</h3>
+        <p>Enter Search Parameters Here.</p>
 
         <form id="monsterSearchForm">
             Monster name:<br/>
@@ -174,7 +173,7 @@
 
 
     <div id="tabs-monstersearchresults">
-        <h3>results</h3>
+        <h3>Monster Search Results</h3>
        <table id="monstersearchresultsTableHolder" class="monsterList">
         <thead>
            <tr>
@@ -191,8 +190,8 @@
 
 
     <div id="tabs-encounterbuilder">
-        <h3>encounter builder</h3>
-        <p>encounter builder parameters</p>
+        <h3>Encounter Builder</h3>
+        <p>Encounter Builder Parameters</p>
 
         <form>
             Average Party Level<br/>
@@ -268,7 +267,7 @@
     <div id="tabs-encounterbuilderresults">
 
         <table id = "encounterSearchResultsXpTableHolder" class = "monsterList">
-
+            <h4>Encounter XP Chart</h4>
             <thead>
             <tr>
                 <th>Number of Monsters</th>
@@ -280,7 +279,7 @@
             </thead>
 
         </table>
-        <h3>results</h3>
+        <h3>Encounter Results</h3>
         <table id="encounterSearchResultsMonsterTableHolder" class="monsterList">
             <thead>
             <tr>
@@ -300,9 +299,16 @@
 <script>
 
 $(document).ready( function() {
-    SearchPage.startup();
+
+    var rawURL = location.href;
+
+    var generatedURL = rawURL.substring(0, rawURL.length-1);
+
+    console.log(generatedURL);
+
+    SearchPage.startup(generatedURL);
     SearchResults.startup();
-    EncounterBuilderCore.startup();
+    EncounterBuilderCore.startup(generatedURL);
     EncounterSearchResults.startup();
 });
 
