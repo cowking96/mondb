@@ -17,7 +17,7 @@ EncounterBuilderCore = {
 
     getMonsterTypesEncounter: function() {
         var type = "";
-        $('input,[type="checkbox"]').each(function () {
+        $(".monTypeEncounter").each(function () {
             if (this.checked) {
                 type = type + this.name.toUpperCase()+" ";
             }

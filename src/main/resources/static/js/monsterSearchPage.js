@@ -116,7 +116,7 @@ SearchPage = {
 
  getMonsterTypes: function() {
     var type = "";
-    $('input,[type="checkbox"]').each(function () {
+    $(".monTypeSearch").each(function () {
         if (this.checked) {
             type = type + this.name.toUpperCase()+" ";
         }
