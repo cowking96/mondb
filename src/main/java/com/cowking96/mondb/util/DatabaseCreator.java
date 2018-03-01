@@ -42,7 +42,7 @@ public class DatabaseCreator {
             MonsterType currentType = convertToMonsterType(cleanedLine[1]);
             float currentCr = convertToFloat(cleanedLine[2]);
             int currentXp = convertToInteger(cleanedLine[3]);
-            String currentPage = "MM" + cleanedLine[4];
+            String currentPage = cleanedLine[4];
 
             Monster monster = new Monster(currentName,currentCr,currentXp,currentPage,currentType);
 
