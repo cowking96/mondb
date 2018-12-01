@@ -127,7 +127,7 @@ Blackguard|npc|8|3900|VO211
 Blight, Needle|plant|0.25|50|MM32
 Blight, Twig|plant|0.125|25|MM32
 Blight, Vine|plant|0.5|100|MM32
-Blink Dog|fey|0.25|50|MM318,
+Blink Dog|fey|0.25|50|MM318
 Bodak|undead|6|2300|VO127
 Boggle|fey|0.125|25|VO128
 Boneclaw|undead|12|8400|TF121
@@ -312,7 +312,7 @@ Elemental, Fire|elemental|5|1800|MM125
 Elemental, Water|elemental|5|1800|MM125
 Empyrean|celestial|23|50000|MM128
 Enchanter|npc|5|1800|VO213
-Ettercap|monstrosity|2|450|MM129
+Ettercap|monstrosity|2|450|MM131
 Ettin|giant|4|1100|MM130
 Evoker|npc|9|5000|VO214
 Firenewt, Warlock of Imix|humanoid|1|200|VO143
@@ -434,8 +434,8 @@ Kraken Priest|npc|5|1800|VO215
 Kruthik, Adult|monstrosity|2|450|TF212
 Kruthik, Hive Lord|monstrosity|5|1800|TF212
 Kruthik, Young|monstrosity|0.125|25|TF211
-Kua-Toa, Archpriest|humanoid|6|2300|MM200
-Kua-Toa, Whip|humanoid|1|200|MM200
+Kuo-Toa, Archpriest|humanoid|6|2300|MM200
+Kuo-Toa, Whip|humanoid|1|200|MM200
 Kuo-Toa|humanoid|0.25|50|MM199
 Lamia|monstrosity|4|1100|MM201
 Leucrotta|monstrosity|3|700|VO169
