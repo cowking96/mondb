@@ -6,13 +6,10 @@ Abishai, Red|fiend|19|22000|TF162
 Abishai, White|fiend|6|2300|TF163
 Abjurer|npc|9|5000|VO209
 Aboleth|aberration|10|5900|MM13
-Abyssal Wretch|fiend|0.25|50|TF136
 Acolyte|npc|0.25|50|MM342
 Aldani (Lobsterfolk)|monstrosity|1|200|TA210
-Alkilith|fiend|11|7200|TF130
 Allip|undead|5|1800|TF116
 Almiraj|beast|0|10|TA211
-Amnizu|fiend|18|20000|TF164
 Amphisbaena|monstrosity|0.5|100|OT208
 Angel, Deva|celestial|10|5900|MM16
 Angel, Planetar|celestial|16|15000|MM17
@@ -103,13 +100,18 @@ Anvilwrought, Burnished Hart|construct|2|450|OT211
 Anvilwrought, Gold-Forged Sentinel|construct|5|1800|OT211
 Anvilwrought, Raptor|construct|0.5|100|OT209
 Apprentice Wizard|npc|0.25|50|VO209
+Archdevil, Bael|fiend|19|22000|TF170
+Archdevil, Geryon|fiend|22|41000|TF173
+Archdevil, Hutijin|fiend|21|33000|TF175
+Archdevil, Hutijin|fiend|21|33000|TF177
+Archdevil, Titivilus|fiend|16|15000|TF179
+Archdevil, Zariel|fiend|26|90000|TF180
 Archdruid|npc|12|8400|VO210
 Archmage|npc|12|8400|MM342
 Archon, Ashen Rider|celestial|16|15000|OT213
 Archon, Falling Stars|celestial|12|8400|OT212
 Archon, Winged Bull|celestial|4|1100|OT214
 Archon, Winged Lion|celestial|4|1100|OT214
-Armanite|fiend|7|2900|TF131
 Assassin|npc|8|3900|MM343
 Assassin Vine|plant|3|700|TA213
 Astral Dreadnought|monstrosity|21|33000|TF117
@@ -118,13 +120,11 @@ Awakened, Shrub|plant|0|10|MM317
 Awakened, Tree|plant|2|450|MM317
 Axe Beak|beast|0.25|50|MM317
 Azer|elemental|2|450|MM22
-Bael|fiend|19|22000|TF170
 Balhannoth|aberration|11|7200|TF119
 Banderhobb|monstrosity|5|1800|VO122
 Bandit|npc|0.125|25|MM343
 Bandit, Captain|npc|2|450|MM344
 Banshee|undead|4|1100|MM23
-Baphomet|fiend|23|50000|TF143
 Bard|npc|2|450|VO211
 Barghest|fiend|4|1100|VO123
 Basilisk|monstrosity|3|700|MM24
@@ -147,7 +147,6 @@ Boneclaw|undead|12|8400|TF121
 Bugbear|humanoid|1|200|MM33
 Bugbear, Chief|humanoid|3|700|MM33
 Bulette|monstrosity|5|1800|MM34
-Bulezau|fiend|3|700|TF131
 Bullywug|humanoid|0.25|50|MM35
 Cadaver Collector|construct|14|11500|TF122
 Cambion|fiend|5|1800|MM36
@@ -191,32 +190,51 @@ Deathlock Mastermind|undead|8|3900|TF129
 Deathlock Wight|undead|3|700|TF129
 Deep Scion|humanoid|3|700|VO135
 Demilich|undead|18|20000|MM48
-Demogorgon|fiend|26|90000|TF144
+Demon Lord, Baphomet|fiend|23|50000|TF143
+Demon Lord, Demogorgon|fiend|26|90000|TF144
+Demon Lord, Fraz-Urb’luu|fiend|23|50000|TF146
+Demon Lord, Graz’zt|fiend|24|62000|TF149
+Demon Lord, Juiblex|fiend|23|50000|TF151
+Demon Lord, Orcus|fiend|26|90000|TF153
+Demon Lord, Yeenoghu|fiend|24|62000|TF155
+Demon Lord, Zuggtmoy|fiend|23|50000|TF157
 Demon, Abhorrent Overlord|fiend|9|5000|OT219
+Demon, Abyssal Wretch|fiend|0.25|50|TF136
+Demon, Alkilith|fiend|11|7200|TF130
+Demon, Armanite|fiend|7|2900|TF131
 Demon, Babu|fiend|4|1100|VO136
 Demon, Balor|fiend|19|22000|MM55
 Demon, Barlgura|fiend|5|1800|MM56
+Demon, Bulezau|fiend|3|700|TF131
 Demon, Chasme|fiend|6|2300|MM57
 Demon, Devourer|fiend|13|10000|VO138
 Demon, Draegloth|fiend|7|2900|VO141
 Demon, Dretch|fiend|0.25|50|MM57
+Demon, Dybbuk|fiend|4|1100|TF132
 Demon, Eater of Hope|fiend|6|2300|OT220
 Demon, Glabrezu|fiend|9|5000|MM58
 Demon, Goristro|fiend|17|18000|MM59
 Demon, Hezrou|fiend|8|3900|MM60
 Demon, Manes|fiend|0.125|25|MM60
 Demon, Marilith|fiend|16|15000|MM61
+Demon, Maurezhi|fiend|7|2900|TF133
 Demon, Maw|fiend|1|200|VO137
+Demon, Molydeus|fiend|21|33000|TF134
+Demon, Nabassu|fiend|15|13000|TF135
 Demon, Nalfeshnee|fiend|13|10000|MM62
 Demon, Nightmare Shepherd|fiend|11|7200|OT221
 Demon, Quasit|fiend|1|200|MM63
+Demon, Rutterkin|fiend|2|450|TF136
 Demon, Shadow|fiend|4|1100|MM64
 Demon, Shoosuva|fiend|8|3900|VO137
+Demon, Sibriex|fiend|18|20000|TF137
 Demon, Tanarukk|fiend|5|1800|VO186
 Demon, Vrock|fiend|6|2300|MM64
+Demon, Wastrilith|fiend|13|10000|TF139
 Demon, Yochlol|fiend|10|5900|MM65
 Derro|humanoid|0.25|50|TF158
 Derro Savant|humanoid|3|700|TF159
+Devil, Amnizu|fiend|18|20000|TF164
 Devil, Barbed|fiend|5|1800|MM70
 Devil, Bearded|fiend|3|700|MM70
 Devil, Bone|fiend|9|5000|MM7
@@ -226,6 +244,10 @@ Devil, Horned|fiend|11|7200|MM74
 Devil, Ice|fiend|14|11500|MM75
 Devil, Imp|fiend|1|200|MM76
 Devil, Lemure|fiend|0|10|MM76
+Devil, Merregon|fiend|4|1100|TF166
+Devil, Narzugon|fiend|13|10000|TF167
+Devil, Nupperibo|fiend|0.5|100|TF168
+Devil, Orthon|fiend|10|5900|TF169
 Devil, Pit Fiend|fiend|20|25000|MM77
 Devil, Spined|fiend|2|450|MM78
 Dinosaur, Allosaurus|beast|2|450|MM79
@@ -314,7 +336,6 @@ Duergar Warlord|humanoid|6|2300|TF192
 Duergar Xarrorn|humanoid|2|450|TF193
 Dwarf, Albino|humanoid|0.25|50|TA210
 Dwarf, Albino Spirit Warrior|humanoid|1|200|TA210
-Dybbuk|fiend|4|1100|TF132
 Eblis|monstrosity|1|200|TA219
 Eidolon|undead|12|8400|TF194
 Eidolon, Flitterstep|undead|3|700|OT222
@@ -348,7 +369,6 @@ Flameskull|undead|4|1100|MM134
 Fleecemane Lion|monstrosity|3|700|OT223
 Flumph|aberration|0.125|25|MM135
 Flying Monkey|beast|0|10|TA220
-Fraz-Urb’luu|fiend|23|50000|TF146
 Froghemoth|monstrosity|10|5900|VO145
 Galeb Duhr|elemental|6|2300|MM139
 Gargoyle|elemental|2|450|MM140
@@ -358,7 +378,6 @@ Genie, Dao|elemental|11|7200|MM143
 Genie, Djinni|elemental|11|7200|MM144
 Genie, Efreeti|elemental|11|7200|MM145
 Genie, Madrid|elemental|11|7200|MM146
-Geryon|fiend|22|41000|TF173
 Ghast|undead|2|450|MM146
 Ghost|undead|4|1100|MM147
 Ghoul|undead|1|200|MM146
@@ -406,7 +425,6 @@ Golem, Iron|construct|16|15000|MM170
 Golem, Stone|construct|10|5900|MM170
 Gorgon|monstrosity|5|1800|MM171
 Gray Render|monstrosity|12|8400|TF209
-Graz’zt|fiend|24|62000|TF149
 Grell|aberration|3|700|MM172
 Grick|monstrosity|2|450|MM173
 Grick, Alpha|monstrosity|7|2900|MM173
@@ -442,7 +460,6 @@ Hoplite, Akroan|humanoid|3|700|OT228
 Hoplite, Meletian|humanoid|3|700|OT229
 Hoplite, Setessan|humanoid|4|1100|OT229
 Howler|fiend|8|3900|TF210
-Hutijin|fiend|21|33000|TF175
 Hydra|monstrosity|8|3900|MM190
 Hydra, Ironscale|monstrosity|12|8400|OT231
 Hydra, Polukranos|monstrosity|19|22000|OT231
@@ -459,7 +476,6 @@ Intellect Devourer|aberration|2|450|MM191
 Invisible Stalker|elemental|6|2300|MM192
 Jackalwere|humanoid|0.5|100|MM193
 Jaculi|beast|0.5|100|TA225
-Juiblex|fiend|23|50000|TF151
 Kamadan|monstrosity|4|1100|TA225
 Kenku|humanoid|0.25|50|MM194
 Ki-rin|celestial|12|8400|VO163
@@ -497,7 +513,6 @@ Mantrap|plant|1|200|TA227
 Martial Arts Adept|npc|3|700|VO216
 Marut|construct|25|75000|TF213
 Master Thief|npc|5|1800|VO216
-Maurezhi|fiend|7|2900|TF133
 Meazel|humanoid|1|200|TF214
 Medusa|monstrosity|6|2300|MM214
 Meenlock|fey|2|450|VO170
@@ -508,7 +523,6 @@ Mephit, Mud|elemental|0.25|50|MM216
 Mephit, Smoke|elemental|0.25|50|MM217
 Mephit, Steam|elemental|0.25|50|MM217
 Merfolk|humanoid|0.125|25|MM218
-Merregon|fiend|4|1100|TF166
 Merrow|monstrosity|2|450|MM219
 Mimic|monstrosity|2|450|MM220
 Mind Flayer|aberration|7|2900|MM222
@@ -522,8 +536,6 @@ Modron, Monodrone|construct|0.125|25|MM224
 Modron, Pentadrone|construct|2|450|MM226
 Modron, Quadrone|construct|1|200|MM226
 Modron, Tridrone|construct|0.5|100|MM225
-Moloch|fiend|21|33000|TF177
-Molydeus|fiend|21|33000|TF134
 Morkoth|aberration|11|7200|VO178
 Mouth of Grolantor|giant|6|2300|VO149
 Mummy|undead|3|700|MM228
@@ -532,12 +544,10 @@ Myconid Sprout|plant|0|10|MM230
 Myconid, Adult|plant|0.5|100|MM232
 Myconid, Quaggoth Spore Servant|plant|1|200|MM230
 Myconid, Sovereign|plant|2|450|MM232
-Nabassu|fiend|15|13000|TF135
 Naga, Bone|undead|4|1100|MM233
 Naga, Guardian|monstrosity|10|5900|MM234
 Naga, Spirit|monstrosity|8|3900|MM234
 Nagpa|humanoid|17|18000|TF215
-Narzugon|fiend|13|10000|TF167
 Necromancer|npc|9|5000|VO217
 Neogi|aberration|3|700|VO180
 Neogi, Hatchling|aberration|0.125|25|VO179
@@ -548,7 +558,6 @@ Nightwalker|undead|20|25000|TF216
 Nilbog|humanoid|1|200|VO182
 Noble|npc|0.125|25|MM348
 Nothic|aberration|2|450|MM236
-Nupperibo|fiend|0.5|100|TF168
 Nymph, Alseid|fey|1|200|OT235
 Nymph, Lampad|fey|3|700|OT235
 Nymph, Naiad|fey|2|450|OT236
@@ -578,8 +587,6 @@ Orc, Nurtured One of Yurtrus|humanoid|0.5|100|VO184
 Orc, Orog|humanoid|2|450|MM247
 Orc, Red Fang of Shagaas|humanoid|3|700|VO185
 Orc, War Chief|humanoid|4|1100|MM246
-Orcus|fiend|26|90000|TF153
-Orthon|fiend|10|5900|TF169
 Otyugh|aberration|5|1800|MM248
 Owlbear|monstrosity|3|700|MM249
 Pegasus|celestial|2|450|MM250
@@ -607,7 +614,6 @@ Revenant|undead|5|1800|MM259
 Roc|monstrosity|11|7200|MM260
 Roper|monstrosity|5|1800|MM261
 Rust Monster|monstrosity|0.5|100|MM252
-Rutterkin|fiend|2|450|TF136
 Sahuagin|humanoid|0.5|100|MM263
 Sahuagin, Baron|humanoid|5|1800|MM264
 Sahuagin, Priestess|humanoid|2|450|MM264
@@ -627,7 +633,6 @@ Shadow Mastiff|monstrosity|2|450|VO190
 Shambling Mound|plant|5|1800|MM270
 Shield Guardian|construct|7|2900|MM271
 Shrieker|plant|0|10|MM138
-Sibriex|fiend|18|20000|TF137
 Skeleton|undead|0.25|50|MM272
 Skeleton, Minotaur|undead|2|450|MM273
 Skeleton, Warhorse|undead|0.5|100|MM273
@@ -678,7 +683,6 @@ Sword Wraith, Warrior|undead|3|700|TF241
 Tarrasque|monstrosity|30|155000|MM286
 Thri-Keen|humanoid|1|200|MM288
 Thug|npc|0.5|100|MM350
-Titivilus|fiend|16|15000|TF179
 Tlincalli|monstrosity|5|1800|VO193
 Tortle|humanoid|0.25|50|TF242
 Tortle, Druid|humanoid|2|450|TF242
@@ -712,7 +716,6 @@ Warlock of the Archfey|npc|4|1100|VO219
 Warlock of the Fiend|npc|7|2900|VO219
 Warlock of the Great Old One|npc|6|2300|VO220
 Warlord|npc|12|8400|VO220
-Wastrilith|fiend|13|10000|TF139
 Water Weird|elemental|3|700|MM299
 Wight|undead|3|700|MM300
 Will-o-Wisp|undead|2|450|MM301
@@ -729,7 +732,6 @@ Yaun-Ti, Broodguard|humanoid|2|450|VO203
 Yaun-Ti, Mind Whisperer|monstrosity|4|1100|VO204
 Yaun-Ti, Nightmare Speaker|monstrosity|4|1100|VO205
 Yaun-Ti, Pit Master|monstrosity|5|1800|VO206
-Yeenoghu|fiend|24|62000|TF155
 Yellow Musk  Zombie|undead|0.25|50|TA237
 Yellow Musk Creeper|plant|2|450|TA237
 Yeth Hound|fey|4|1100|VO201
@@ -751,7 +753,6 @@ Yuggoloth, Nycaloth|fiend|9|5000|MM314
 Yuggoloth, Oinoloth|fiend|12|8400|TF251
 Yuggoloth, Ultraloth|fiend|13|10000|MM314
 Yuggoloth, Yagnoloth|fiend|11|7200|TF252
-Zariel|fiend|26|90000|TF180
 Zombie|undead|0.25|50|MM316
 Zombie, Ankylosaurus|undead|3|700|TA240
 Zombie, Beholder|undead|5|1800|MM316
@@ -759,4 +760,3 @@ Zombie, Girallon|undead|3|700|TA240
 Zombie, Ogre|undead|2|450|MM316
 Zombie, Tyrannosaurus|undead|8|3900|TA241
 Zorbo|monstrosity|0.5|100|TA241
-Zuggtmoy|fiend|23|50000|TF157
